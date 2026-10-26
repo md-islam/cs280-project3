@@ -1,15 +1,14 @@
 {
-  "status": "PREVIEW — NOT FINAL",
-  "publication_authorized": false,
-  "proposed_url": "https://md-islam.github.io/cs280-project3/",
+  "status": "Part A handoff incomplete",
+  "site_url": "https://md-islam.github.io/cs280-project3/",
   "files": {
     ".nojekyll": {
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0
     },
     "index.html": {
-      "sha256": "1c609c31164cf8ab6e22938717aa0a4ae02ad3e90b825ed6f7ae49f1a182e2e7",
-      "bytes": 3666
+      "sha256": "61b9d05e74898b0b17e24ef42ca7a7301ef1326c0602d81988714d6b14dd05fb",
+      "bytes": 3319
     },
     "integration.css": {
       "sha256": "64ca12b31778cb755b6a9c5042d4b7aa2830bb18f5ed51b227a647b0d80e4c8d",
@@ -156,16 +155,16 @@
       "bytes": 17356
     },
     "partb/index.html": {
-      "sha256": "8ef3bf149c1c9d1c7877936cc31ee114fc6f43fafa44ce6bf1f763ed248352fc",
-      "bytes": 30093
+      "sha256": "2b506e0a717970953ddd150a2c14602063e305580d5bba45d327e028cad97995",
+      "bytes": 29943
     },
     "partb/styles.css": {
       "sha256": "9310bcbc1b51a0d3f8e7316ae556afe0c30b1c44a928d611ed4d900a92d4f08e",
       "bytes": 6573
     },
     "report.html": {
-      "sha256": "e5685fe9f05ccf65c52cecdf40a67cef84f8972f905cb96b7b466e248c36ad12",
-      "bytes": 40961
+      "sha256": "25a897f5a8313d8481981a41808fed94c92fb4b5d1de7f94288481453e08d1ea",
+      "bytes": 40694
     }
   }
 }

@@ -2,6 +2,415 @@
   "schema_version": 2,
   "figures": [
     {
+      "section_id": "a11",
+      "figure_id": "parta-section11-training_inputs",
+      "experiment_id": "section11",
+      "experiment_type": "noising",
+      "source_filename": "section11-training_inputs.png",
+      "sha256": "8028378c3d2937329298e7d195249084c40aaafffe8f7ef38c55c0bbf3cfdd8f",
+      "width": 1760,
+      "height": 440,
+      "settings": {
+        "prompt": "a high quality photo",
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "seed": 180,
+        "time_values": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Clock-tower original and shared-noise inputs at t=0.25, 0.50 and 0.75. The actual student input is the personal clock-tower photograph, not Campanile.",
+      "caption_status": "reviewed",
+      "alt_text": "Clock-tower original and shared-noise inputs at t=0.25, 0.50 and 0.75. The actual student input is the personal clock-tower photograph, not Campanile.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/section11-training_inputs.png",
+      "image_path": "parta/images/section11-training_inputs.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a12",
+      "figure_id": "parta-section12-gaussian_blur_comparison",
+      "experiment_id": "section12",
+      "experiment_type": "gaussian_baseline",
+      "source_filename": "section12-gaussian_blur_comparison.png",
+      "sha256": "374fe1462510565f8b3d1ab09e56cc09cc26922dbfaa53a7af04d8943b6f3eff",
+      "width": 1100,
+      "height": 1650,
+      "settings": {
+        "prompt": "a high quality photo",
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "seed": 180,
+        "time_values": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Clock-tower Gaussian baseline after amplitude restoration x_t/t; selected sigma 8, 4 and 1 at t=0.25, 0.50 and 0.75.",
+      "caption_status": "reviewed",
+      "alt_text": "Clock-tower Gaussian baseline after amplitude restoration x_t/t; selected sigma 8, 4 and 1 at t=0.25, 0.50 and 0.75.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/section12-gaussian_blur_comparison.png",
+      "image_path": "parta/images/section12-gaussian_blur_comparison.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a13",
+      "figure_id": "parta-section13-one_step_comparison",
+      "experiment_id": "section13",
+      "experiment_type": "one_step",
+      "source_filename": "section13-one_step_comparison.png",
+      "sha256": "a0a8b1796047ae6087f9453b4022fb2d7a5b20773f66de091e24af943d148f7d",
+      "width": 1650,
+      "height": 1650,
+      "settings": {
+        "prompt": "a high quality photo",
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "seed": 180,
+        "time_values": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Original clock tower, noisy inputs and one-step endpoint estimates at all three required times.",
+      "caption_status": "reviewed",
+      "alt_text": "Original clock tower, noisy inputs and one-step endpoint estimates at all three required times.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/section13-one_step_comparison.png",
+      "image_path": "parta/images/section13-one_step_comparison.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a14",
+      "figure_id": "parta-section14-velocity_diagnostics",
+      "experiment_id": "section14",
+      "experiment_type": "velocity_diagnostics",
+      "source_filename": "section14-velocity_diagnostics.png",
+      "sha256": "4f4e648dfe5cc9c040cf7223feeb51c966ab0c1f8fd1082fae10e89a17252424",
+      "width": 2880,
+      "height": 2880,
+      "settings": {
+        "prompt": "a high quality photo",
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "seed": 180,
+        "time_values": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Clock-tower noisy inputs, predicted and ground-truth updates, and per-pixel RGB RMS error at t=0.25, 0.50 and 0.75. Update panels share a symmetric scale; heatmaps share linear limits.",
+      "caption_status": "reviewed",
+      "alt_text": "Clock-tower noisy inputs, predicted and ground-truth updates, and per-pixel RGB RMS error at t=0.25, 0.50 and 0.75. Update panels share a symmetric scale; heatmaps share linear limits.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/section14-velocity_diagnostics.png",
+      "image_path": "parta/images/section14-velocity_diagnostics.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a15",
+      "figure_id": "parta-section15-euler_trajectory",
+      "experiment_id": "section15",
+      "experiment_type": "euler_trajectory",
+      "source_filename": "section15-euler_trajectory.png",
+      "sha256": "8bc1d1f3dc68731f03d2cca5aff1cd87ccdff8d0c565a8f89fb5d071d38770ad",
+      "width": 2400,
+      "height": 1600,
+      "settings": {
+        "prompt": "a high quality photo",
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "seed": 180,
+        "time_values": [
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          1
+        ],
+        "euler_step_size": 0.02,
+        "sampling_steps": 25
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Euler trajectory from t=0.50 to 1.00: initial state, every fifth update and final image (25 updates, step 0.02).",
+      "caption_status": "reviewed",
+      "alt_text": "Euler trajectory from t=0.50 to 1.00: initial state, every fifth update and final image (25 updates, step 0.02).",
+      "observation_status": "reviewed",
+      "destination": "parta/images/section15-euler_trajectory.png",
+      "image_path": "parta/images/section15-euler_trajectory.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a15",
+      "figure_id": "parta-section15-denoising_comparison",
+      "experiment_id": "section15",
+      "experiment_type": "euler_trajectory",
+      "source_filename": "section15-denoising_comparison.png",
+      "sha256": "93f6cd3008f88dc64b2fabb3c7689aa649c33a1373e53e03ac721160f1b21316",
+      "width": 3200,
+      "height": 800,
+      "settings": {
+        "prompt": "a high quality photo",
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "seed": 180,
+        "time_values": [
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          1
+        ],
+        "euler_step_size": 0.02,
+        "sampling_steps": 25
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Same-input denoising comparison: original, Gaussian blur, one-step and Euler. Recorded MSE is 0.0437529646, 0.0181908794 and 0.0217692759 respectively; one-step is lowest.",
+      "caption_status": "reviewed",
+      "alt_text": "Same-input denoising comparison: original, Gaussian blur, one-step and Euler. Recorded MSE is 0.0437529646, 0.0181908794 and 0.0217692759 respectively; one-step is lowest.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/section15-denoising_comparison.png",
+      "image_path": "parta/images/section15-denoising_comparison.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a16",
+      "figure_id": "parta-section16-generated_samples",
+      "experiment_id": "section16",
+      "experiment_type": "generation",
+      "source_filename": "section16-generated_samples.png",
+      "sha256": "acefa792ea351605d7710eeefe80173baa7108fb0b46d695885001bf97594216",
+      "width": 3200,
+      "height": 640,
+      "settings": {
+        "prompt": "a high quality photo",
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "euler_step_size": 0.02,
+        "sampling_steps": 50,
+        "initial_noise_id": "section1_6-seeds-180-184"
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Five ordinary conditional samples, seeds 180–184; prompt “a high quality photo,” 50 Euler steps each, step 0.02.",
+      "caption_status": "reviewed",
+      "alt_text": "Five ordinary conditional samples, seeds 180–184; prompt “a high quality photo,” 50 Euler steps each, step 0.02.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/section16-generated_samples.png",
+      "image_path": "parta/images/section16-generated_samples.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a21",
+      "figure_id": "parta-section21-cfg_comparison",
+      "experiment_id": "section21",
+      "experiment_type": "cfg_comparison",
+      "source_filename": "section21-cfg_comparison.png",
+      "sha256": "d3a48f1e52468cfb00a8495dc5da89f0a7f5568c6c29a6a0f6fab134368a198d",
+      "width": 1600,
+      "height": 4000,
+      "settings": {
+        "prompt": "a high quality photo",
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "euler_step_size": 0.02,
+        "sampling_steps": 50,
+        "initial_noise_id": "section1_6-seeds-180-184",
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        }
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Ordinary and CFG-7 samples for seeds 180–184 with exactly matched initial-noise tensors. Empty-string unconditional embedding; 50 Euler steps and 100 model predictions per guided sample.",
+      "caption_status": "reviewed",
+      "alt_text": "Ordinary and CFG-7 samples for seeds 180–184 with exactly matched initial-noise tensors. Empty-string unconditional embedding; 50 Euler steps and 100 model predictions per guided sample.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/section21-cfg_comparison.png",
+      "image_path": "parta/images/section21-cfg_comparison.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a31",
+      "figure_id": "parta-3_1_campanile-campanile_edits",
+      "experiment_id": "3_1_campanile",
+      "experiment_type": "editing_sweep",
+      "source_filename": "3_1_campanile-campanile_edits.png",
+      "sha256": "d369122ac34d8f95ff478376be281d892dd6481a22e69c0ea121bf8d4f8581a1",
+      "width": 3200,
+      "height": 1600,
+      "settings": {
+        "seed": 180,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a high quality photo",
+        "starting_times": [
+          0.02,
+          0.04,
+          0.06,
+          0.1,
+          0.14,
+          0.25,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Campanile SDEdit at seven starting times using the generic photo prompt. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Campanile SDEdit at seven starting times using the generic photo prompt. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_1_campanile-campanile_edits.png",
+      "image_path": "parta/images/3_1_campanile-campanile_edits.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a31",
+      "figure_id": "parta-3_1_clock_tower-personal_1_edits",
+      "experiment_id": "3_1_clock_tower",
+      "experiment_type": "editing_sweep",
+      "source_filename": "3_1_clock_tower-personal_1_edits.png",
+      "sha256": "6f603fc421827dc75994fdb9a2a50a91a8a7dda695c6e7a9ebc947c2edf4f1ea",
+      "width": 3200,
+      "height": 1600,
+      "settings": {
+        "seed": 181,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a high quality photo",
+        "starting_times": [
+          0.02,
+          0.04,
+          0.06,
+          0.1,
+          0.14,
+          0.25,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Clock-tower SDEdit with the generic photo prompt. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Clock-tower SDEdit with the generic photo prompt. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_1_clock_tower-personal_1_edits.png",
+      "image_path": "parta/images/3_1_clock_tower-personal_1_edits.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a31",
+      "figure_id": "parta-3_1_range_rover-personal_2_edits",
+      "experiment_id": "3_1_range_rover",
+      "experiment_type": "editing_sweep",
+      "source_filename": "3_1_range_rover-personal_2_edits.png",
+      "sha256": "843641aaf7e0a0e007782dfdbd83b08753b270c8f2f439979134ba826dadc620",
+      "width": 2700,
+      "height": 1500,
+      "settings": {
+        "seed": 182,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a high quality photo",
+        "starting_times": [
+          0.02,
+          0.04,
+          0.06,
+          0.1,
+          0.14,
+          0.25,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Range Rover SDEdit with the generic photo prompt. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Range Rover SDEdit with the generic photo prompt. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_1_range_rover-personal_2_edits.png",
+      "image_path": "parta/images/3_1_range_rover-personal_2_edits.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
       "section_id": "a31",
       "figure_id": "parta-great-wave-sdedit",
       "experiment_id": "section3_1_web_1",
@@ -32,12 +441,429 @@
       "settings_status": "verified_recorded",
       "completion_status": "complete",
       "approved_for_report": true,
-      "caption": "SDEdit of Hokusai’s The Great Wave off Kanagawa, sourced via Wikimedia Commons. The comparison records edits at starting times 0.02, 0.04, 0.06, 0.10, 0.14, 0.25 and 0.50 using the prompt “a high quality photo,” seed 194, Part A guidance coefficient 7 and Euler step size 0.02. Larger starting times inject more noise before denoising. The original source JPEG was not independently verified in this integration audit.",
+      "caption": "Hokusai, The Great Wave off Kanagawa (Wikimedia Commons): original and all seven SDEdit starting times. Seed 194, prompt “a high quality photo,” guidance 7, step 0.02. Larger starting times preserve more of the input. The local source JPEG hash matches the recorded input metadata. Exact prompts and schedule are recorded below.",
       "caption_status": "reviewed",
-      "alt_text": "Original Great Wave image and seven SDEdit outputs labeled with their starting times.",
+      "alt_text": "Hokusai, The Great Wave off Kanagawa (Wikimedia Commons): original and all seven SDEdit starting times. Seed 194, prompt “a high quality photo,” guidance 7, step 0.02. Larger starting times preserve more of the input. The local source JPEG hash matches the recorded input metadata. Exact prompts and schedule are recorded below.",
       "observation_status": "reviewed",
       "destination": "parta/images/great_wave_sdedit.png",
       "image_path": "parta/images/great_wave_sdedit.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a31",
+      "figure_id": "parta-3_1_house_illustration-comparison",
+      "experiment_id": "3_1_house_illustration",
+      "experiment_type": "editing_sweep",
+      "source_filename": "3_1_house_illustration-comparison.png",
+      "sha256": "f5da633f0948a5d6b547b41cf3327add45e22700dafe1dad7a0cb819b2d9eb71",
+      "width": 2080,
+      "height": 1040,
+      "settings": {
+        "seed": 195,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a high quality photo",
+        "starting_times": [
+          0.02,
+          0.04,
+          0.06,
+          0.1,
+          0.14,
+          0.25,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "House drawing: original and all seven SDEdit starting times; seed 195, guidance 7, step 0.02. The student directly confirms hand-drawn authorship; input identity is separately verified by hash. Earlier archive descriptions conflict with that statement and are preserved as historical records, not independent creation-process evidence. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "House drawing: original and all seven SDEdit starting times; seed 195, guidance 7, step 0.02. The student directly confirms hand-drawn authorship; input identity is separately verified by hash. Earlier archive descriptions conflict with that statement and are preserved as historical records, not independent creation-process evidence. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_1_house_illustration-comparison.png",
+      "image_path": "parta/images/3_1_house_illustration-comparison.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a31",
+      "figure_id": "parta-3_1_sailboat_illustration_seed197-comparison",
+      "experiment_id": "3_1_sailboat_illustration_seed197",
+      "experiment_type": "editing_sweep",
+      "source_filename": "3_1_sailboat_illustration_seed197-comparison.png",
+      "sha256": "11ad4e9c9a08b0b10517ac06493ad05b6eaef3cac87613d37fa2c5dc50b9c5f1",
+      "width": 1620,
+      "height": 1620,
+      "settings": {
+        "seed": 197,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a high quality photo",
+        "starting_times": [
+          0.02,
+          0.04,
+          0.06,
+          0.1,
+          0.14,
+          0.25,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Selected sailboat drawing sweep: seed 197, contrast factor 2.5, guidance 7, step 0.02; original enhanced input and all seven times. The student confirms hand-drawn authorship; the original file identity is hash-verified. Historical descriptions conflict. The original seed-197 generating cell is missing; the later seed-198 alternative is not shown as this result. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Selected sailboat drawing sweep: seed 197, contrast factor 2.5, guidance 7, step 0.02; original enhanced input and all seven times. The student confirms hand-drawn authorship; the original file identity is hash-verified. Historical descriptions conflict. The original seed-197 generating cell is missing; the later seed-198 alternative is not shown as this result. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_1_sailboat_illustration_seed197-comparison.png",
+      "image_path": "parta/images/3_1_sailboat_illustration_seed197-comparison.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a32",
+      "figure_id": "parta-3_2_campanile-campanile_text_guided",
+      "experiment_id": "3_2_campanile",
+      "experiment_type": "editing_sweep",
+      "source_filename": "3_2_campanile-campanile_text_guided.png",
+      "sha256": "4829aab69bf2ef010968fe45e2d1008b47ff8f999ecfed11e684d22e8a89228e",
+      "width": 2700,
+      "height": 1500,
+      "settings": {
+        "seed": 180,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a photograph of a tall red and white lighthouse by the sea under a clear blue sky",
+        "starting_times": [
+          0.02,
+          0.04,
+          0.06,
+          0.1,
+          0.14,
+          0.25,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Campanile transformed toward a red-and-white lighthouse. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Campanile transformed toward a red-and-white lighthouse. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_2_campanile-campanile_text_guided.png",
+      "image_path": "parta/images/3_2_campanile-campanile_text_guided.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a32",
+      "figure_id": "parta-3_2_clock_tower-clock_tower_text_guided",
+      "experiment_id": "3_2_clock_tower",
+      "experiment_type": "editing_sweep",
+      "source_filename": "3_2_clock_tower-clock_tower_text_guided.png",
+      "sha256": "8f2ff4d26f66cf198c754d051c5e21b5b950cc9343a169d556ad38d89c22703c",
+      "width": 2700,
+      "height": 1500,
+      "settings": {
+        "seed": 181,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a photograph of a futuristic glass skyscraper illuminated with blue neon lights at night",
+        "starting_times": [
+          0.02,
+          0.04,
+          0.06,
+          0.1,
+          0.14,
+          0.25,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Clock tower transformed toward a neon-lit futuristic skyscraper. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Clock tower transformed toward a neon-lit futuristic skyscraper. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_2_clock_tower-clock_tower_text_guided.png",
+      "image_path": "parta/images/3_2_clock_tower-clock_tower_text_guided.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a32",
+      "figure_id": "parta-3_2_range_rover-range_rover_text_guided",
+      "experiment_id": "3_2_range_rover",
+      "experiment_type": "editing_sweep",
+      "source_filename": "3_2_range_rover-range_rover_text_guided.png",
+      "sha256": "ba65af593857ba95c1b3d521213964a3f521179cb985da754bc9276aa1cf0157",
+      "width": 2700,
+      "height": 1500,
+      "settings": {
+        "seed": 182,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a high quality photograph of a futuristic electric luxury SUV with glowing blue headlights and sleek metallic bodywork, on a neon-lit city street at night",
+        "starting_times": [
+          0.02,
+          0.04,
+          0.06,
+          0.1,
+          0.14,
+          0.25,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Range Rover transformed toward a futuristic electric SUV. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Range Rover transformed toward a futuristic electric SUV. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_2_range_rover-range_rover_text_guided.png",
+      "image_path": "parta/images/3_2_range_rover-range_rover_text_guided.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a33",
+      "figure_id": "parta-3_3_old_man_campfire-anagram_1_comparison",
+      "experiment_id": "3_3_old_man_campfire",
+      "experiment_type": "anagram",
+      "source_filename": "3_3_old_man_campfire-anagram_1_comparison.png",
+      "sha256": "156b14ea2bce784b981a0170a06208e672ec0c8d4131d2be3f1a3e3a7fdced50",
+      "width": 1920,
+      "height": 960,
+      "settings": {
+        "seed": 186,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt_pair": [
+          "an oil painting of an old man",
+          "an oil painting of people around a campfire"
+        ],
+        "sampling_steps": 50
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Original 180-degree old-man/campfire visual anagram. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Original 180-degree old-man/campfire visual anagram. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_3_old_man_campfire-anagram_1_comparison.png",
+      "image_path": "parta/images/3_3_old_man_campfire-anagram_1_comparison.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a33",
+      "figure_id": "parta-3_3_old_man_brightened-original_vs_brightened",
+      "experiment_id": "3_3_old_man_brightened",
+      "experiment_type": "anagram",
+      "source_filename": "3_3_old_man_brightened-original_vs_brightened.png",
+      "sha256": "704320d845899c50d66ebc10c0b7f794498b54ea57dc322541cf2e1fcebad2d7",
+      "width": 1680,
+      "height": 1400,
+      "settings": {
+        "seed": 186,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt_pair": [
+          "an oil painting of an old man",
+          "an oil painting of people around a campfire"
+        ],
+        "sampling_steps": 50,
+        "transformation": {
+          "name": "presentation-only gamma",
+          "definition": "gamma 0.55 on existing 8-bit PNG; no new inference; raw image retained"
+        }
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Same 180-degree anagram with labeled gamma 0.55 presentation correction; original output preserved. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Same 180-degree anagram with labeled gamma 0.55 presentation correction; original output preserved. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_3_old_man_brightened-original_vs_brightened.png",
+      "image_path": "parta/images/3_3_old_man_brightened-original_vs_brightened.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a33",
+      "figure_id": "parta-3_3_village_horse-comparison",
+      "experiment_id": "3_3_village_horse",
+      "experiment_type": "anagram",
+      "source_filename": "3_3_village_horse-comparison.png",
+      "sha256": "53670005598c31676d4531d062504990ffb6fde5d0ff4ebf280c482fea5b2a7f",
+      "width": 1540,
+      "height": 1400,
+      "settings": {
+        "seed": 187,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt_pair": [
+          "a high quality photo of a small mountain village in soft daylight",
+          "a high quality photo of a horse standing in a grassy meadow in soft daylight"
+        ],
+        "sampling_steps": 50
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "180-degree village/horse visual anagram. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "180-degree village/horse visual anagram. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_3_village_horse-comparison.png",
+      "image_path": "parta/images/3_3_village_horse-comparison.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a34",
+      "figure_id": "parta-3_4_waterfall_skull-hybrid_1_comparison",
+      "experiment_id": "3_4_waterfall_skull",
+      "experiment_type": "hybrid",
+      "source_filename": "3_4_waterfall_skull-hybrid_1_comparison.png",
+      "sha256": "8112997b5dff106d0e18d5ebeb5b857e64bd84e7d3f10c61eed6c7a1b8e1ce56",
+      "width": 1540,
+      "height": 700,
+      "settings": {
+        "seed": 188,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt_pair": [
+          "a lithograph of a skull",
+          "a lithograph of a waterfall"
+        ],
+        "sampling_steps": 50,
+        "transformation": {
+          "name": "Gaussian frequency split",
+          "definition": "lowpass(v_low) + v_high - lowpass(v_high); kernel 265, sigma 16"
+        }
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Near waterfall and distant skull; distant skull interpretation is subtle. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Near waterfall and distant skull; distant skull interpretation is subtle. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_4_waterfall_skull-hybrid_1_comparison.png",
+      "image_path": "parta/images/3_4_waterfall_skull-hybrid_1_comparison.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a34",
+      "figure_id": "parta-3_4_forest_cat_retry1-hybrid_comparison",
+      "experiment_id": "3_4_forest_cat_retry1",
+      "experiment_type": "hybrid",
+      "source_filename": "3_4_forest_cat_retry1-hybrid_comparison.png",
+      "sha256": "922d458c04b8e721c9a93c37a7fcdde0f2559aa54a924abc62d3a26bbff24189",
+      "width": 1960,
+      "height": 630,
+      "settings": {
+        "seed": 190,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt_pair": [
+          "a lithograph of a large black cat sitting upright, with pointed ears and bright eyes, centered on a white background",
+          "a detailed lithograph of a forest of many tall thin trees with intricate branches and leaves"
+        ],
+        "sampling_steps": 50,
+        "transformation": {
+          "name": "Gaussian frequency split",
+          "definition": "lowpass(v_low) + v_high - lowpass(v_high); kernel 265, sigma 16"
+        }
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Near forest and distant black-cat-like silhouette; dual interpretation is limited. Exact prompts and schedule are recorded below.",
+      "caption_status": "reviewed",
+      "alt_text": "Near forest and distant black-cat-like silhouette; dual interpretation is limited. Exact prompts and schedule are recorded below.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/3_4_forest_cat_retry1-hybrid_comparison.png",
+      "image_path": "parta/images/3_4_forest_cat_retry1-hybrid_comparison.png",
       "intentional_reuse": false,
       "verification": {
         "status": "byte-identical",
@@ -66,18 +892,17 @@
           "a black and white lithograph of a long steam locomotive on railway tracks"
         ],
         "sampling_steps": 50,
-        "initial_noise_sha256": "645313ce248aef19adc6760e2a0d7c8614ece92523a08a38ec6e638982bc5632",
         "transformation": {
-          "name": "90-degree counterclockwise rotation",
+          "name": "90-degree rotation",
           "definition": "torch.rot90(x, 1, dims=(-2, -1)); inverse: torch.rot90(x, -1, dims=(-2, -1))"
         }
       },
       "settings_status": "verified_recorded",
       "completion_status": "complete",
       "approved_for_report": true,
-      "caption": "CS 280A graduate rotational visual anagram: the same generated image is presented upright with the lighthouse prompt and rotated 90 degrees counterclockwise with the steam-locomotive prompt. The rotated PNG is an exact pixel rotation of the upright PNG. Seed 191; 50 Euler steps of size 0.02; Part A guidance coefficient 7. These are the intended paired interpretations from the previously content-approved Part A experiment, not a new subjective evaluation.",
+      "caption": "Graduate 90-degree lighthouse/steam-train visual anagram. Exact prompts and schedule are recorded below.",
       "caption_status": "reviewed",
-      "alt_text": "Two orientations of one generated image, labeled for the upright lighthouse and rotated steam-locomotive prompts.",
+      "alt_text": "Graduate 90-degree lighthouse/steam-train visual anagram. Exact prompts and schedule are recorded below.",
       "observation_status": "reviewed",
       "destination": "parta/images/rotate90_lighthouse_train.png",
       "image_path": "parta/images/rotate90_lighthouse_train.png",
@@ -89,36 +914,40 @@
     },
     {
       "section_id": "a-graduate",
-      "figure_id": "parta-course-logo-design",
-      "experiment_id": "grad_course_logo_1",
-      "experiment_type": "course_logo",
-      "source_filename": "course_logo_design.png",
-      "sha256": "c129863e5614ea3960fc18a43d36e7e706a5b1fc02834a035a70473b12fe5aac",
-      "width": 512,
-      "height": 640,
+      "figure_id": "parta-grad_jigsaw_woman_flowers-comparison",
+      "experiment_id": "grad_jigsaw_woman_flowers",
+      "experiment_type": "graduate_transformation",
+      "source_filename": "grad_jigsaw_woman_flowers-comparison.png",
+      "sha256": "c7b007d2d47bb983ce2f8be432ee40a9041b7100f982d20b216246bba73cbb1a",
+      "width": 1540,
+      "height": 700,
       "settings": {
-        "seed": 193,
+        "seed": 199,
         "guidance": {
           "formula": "v_cond + w * (v_cond - v_uncond)",
           "coefficient": 7
         },
         "euler_step_size": 0.02,
         "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
-        "prompt": "a beautifully designed flat vector emblem for a university computer vision course, a stylized clock tower at the center of a camera lens, clean geometric shapes, deep navy blue and warm California gold, cream background, elegant minimal graphic design",
-        "starting_times": [
-          0.3,
-          0.5
-        ]
+        "prompt_pair": [
+          "an oil painting of a woman staring out of a window",
+          "an oil painting of a wooden table with a vase of colorful flowers"
+        ],
+        "sampling_steps": 50,
+        "transformation": {
+          "name": "2x2 tile permutation",
+          "definition": "2x2 square-tile permutation (no interpolation); inverse: [1, 3, 0, 2]"
+        }
       },
       "settings_status": "verified_recorded",
       "completion_status": "complete",
       "approved_for_report": true,
-      "caption": "CS 280A graduate course-logo final design. An original programmatically generated sketch was refined with PixNerd-guided SDEdit at starting times 0.30 and 0.50. The t=0.50 edit was selected, and typography was subsequently added using PIL. Seed 193; Part A guidance coefficient 7; Euler step size 0.02. The typography is postprocessing, not text generated by the flow model.",
+      "caption": "Graduate 2x2 jigsaw: woman/window vs. vase of flowers; second interpretation is weak. Exact prompts and schedule are recorded below.",
       "caption_status": "reviewed",
-      "alt_text": "Final course-logo design with typography added after the selected t=0.50 SDEdit refinement.",
+      "alt_text": "Graduate 2x2 jigsaw: woman/window vs. vase of flowers; second interpretation is weak. Exact prompts and schedule are recorded below.",
       "observation_status": "reviewed",
-      "destination": "parta/images/course_logo_design.png",
-      "image_path": "parta/images/course_logo_design.png",
+      "destination": "parta/images/grad_jigsaw_woman_flowers-comparison.png",
+      "image_path": "parta/images/grad_jigsaw_woman_flowers-comparison.png",
       "intentional_reuse": false,
       "verification": {
         "status": "byte-identical",
@@ -151,12 +980,50 @@
       "settings_status": "verified_recorded",
       "completion_status": "complete",
       "approved_for_report": true,
-      "caption": "CS 280A graduate course-logo process comparison. An original programmatically generated sketch was refined with PixNerd-guided SDEdit at starting times 0.30 and 0.50. The t=0.50 edit was selected, and typography was subsequently added using PIL. Seed 193; Part A guidance coefficient 7; Euler step size 0.02. The typography is postprocessing, not text generated by the flow model.",
+      "caption": "Programmatically generated PIL sketch, flow edits at t=0.30 and t=0.50, and final logo. The t=0.50 edit was selected; PIL typography is postprocessing, not model-generated lettering. Seed 193, guidance 7, step 0.02. ",
       "caption_status": "reviewed",
-      "alt_text": "Course-logo process grid comparing the programmatic sketch, two SDEdit refinements and final typographic design.",
+      "alt_text": "Programmatically generated PIL sketch, flow edits at t=0.30 and t=0.50, and final logo. The t=0.50 edit was selected; PIL typography is postprocessing, not model-generated lettering. Seed 193, guidance 7, step 0.02. ",
       "observation_status": "reviewed",
       "destination": "parta/images/course_logo_process.png",
       "image_path": "parta/images/course_logo_process.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a-graduate",
+      "figure_id": "parta-course-logo-design",
+      "experiment_id": "grad_course_logo_1",
+      "experiment_type": "course_logo",
+      "source_filename": "course_logo_design.png",
+      "sha256": "c129863e5614ea3960fc18a43d36e7e706a5b1fc02834a035a70473b12fe5aac",
+      "width": 512,
+      "height": 640,
+      "settings": {
+        "seed": 193,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a beautifully designed flat vector emblem for a university computer vision course, a stylized clock tower at the center of a camera lens, clean geometric shapes, deep navy blue and warm California gold, cream background, elegant minimal graphic design",
+        "starting_times": [
+          0.3,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "Final course-logo design from the programmatically generated sketch and selected t=0.50 flow edit; PIL typography and canvas compositing are postprocessing. Seed 193; guidance 7; step 0.02.",
+      "caption_status": "reviewed",
+      "alt_text": "Navy and gold course logo with typography added by PIL.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/course_logo_design.png",
+      "image_path": "parta/images/course_logo_design.png",
       "intentional_reuse": false,
       "verification": {
         "status": "byte-identical",

@@ -1,5 +1,5 @@
 {
-  "status": "Part A handoff incomplete",
+  "status": "Complete report with documented reproducibility limitations",
   "site_url": "https://md-islam.github.io/cs280-project3/",
   "files": {
     ".nojekyll": {
@@ -7,24 +7,76 @@
       "bytes": 0
     },
     "index.html": {
-      "sha256": "61b9d05e74898b0b17e24ef42ca7a7301ef1326c0602d81988714d6b14dd05fb",
-      "bytes": 3319
+      "sha256": "8c81073dd70ef0dd68b53afb200d54de5c2b4d1755c6b87cf0cf1fa0f66d6ab7",
+      "bytes": 3281
     },
     "integration.css": {
-      "sha256": "64ca12b31778cb755b6a9c5042d4b7aa2830bb18f5ed51b227a647b0d80e4c8d",
-      "bytes": 8841
+      "sha256": "9a69230fc4b198ce1dd19ea5ebc917532e95f8c733694db9cbdff43316d0199e",
+      "bytes": 9270
     },
     "parta/archive_provenance.json": {
-      "sha256": "7510d0c7616070365ae17d6d815178fadef0bbf40c8213332c36a804075980c6",
-      "bytes": 2593
+      "sha256": "e53cf862f535349ed028c370e9dbd2e9aaa34342009d07e7d73f5bab99174639",
+      "bytes": 21792
     },
     "parta/evidence_manifest.json": {
-      "sha256": "2d07b78f0d8332326859bd8d6f532d45228807ae1ae607406f4eee2b5f315694",
-      "bytes": 8289
+      "sha256": "c6d8cab3b6611ade17f19e16afa7bec22478385fae4f09cb0a69bf115b02389e",
+      "bytes": 45452
     },
     "parta/figure_import.schema.json": {
       "sha256": "21ab2f2a68f3b6f6ba68945fe05a64e44188d5116f265a410e19088c7b48ea85",
       "bytes": 7091
+    },
+    "parta/images/3_1_campanile-campanile_edits.png": {
+      "sha256": "d369122ac34d8f95ff478376be281d892dd6481a22e69c0ea121bf8d4f8581a1",
+      "bytes": 5015668
+    },
+    "parta/images/3_1_clock_tower-personal_1_edits.png": {
+      "sha256": "6f603fc421827dc75994fdb9a2a50a91a8a7dda695c6e7a9ebc947c2edf4f1ea",
+      "bytes": 5874045
+    },
+    "parta/images/3_1_house_illustration-comparison.png": {
+      "sha256": "f5da633f0948a5d6b547b41cf3327add45e22700dafe1dad7a0cb819b2d9eb71",
+      "bytes": 2651815
+    },
+    "parta/images/3_1_range_rover-personal_2_edits.png": {
+      "sha256": "843641aaf7e0a0e007782dfdbd83b08753b270c8f2f439979134ba826dadc620",
+      "bytes": 5546834
+    },
+    "parta/images/3_1_sailboat_illustration_seed197-comparison.png": {
+      "sha256": "11ad4e9c9a08b0b10517ac06493ad05b6eaef3cac87613d37fa2c5dc50b9c5f1",
+      "bytes": 2193797
+    },
+    "parta/images/3_2_campanile-campanile_text_guided.png": {
+      "sha256": "4829aab69bf2ef010968fe45e2d1008b47ff8f999ecfed11e684d22e8a89228e",
+      "bytes": 4146200
+    },
+    "parta/images/3_2_clock_tower-clock_tower_text_guided.png": {
+      "sha256": "8f2ff4d26f66cf198c754d051c5e21b5b950cc9343a169d556ad38d89c22703c",
+      "bytes": 5677516
+    },
+    "parta/images/3_2_range_rover-range_rover_text_guided.png": {
+      "sha256": "ba65af593857ba95c1b3d521213964a3f521179cb985da754bc9276aa1cf0157",
+      "bytes": 5603365
+    },
+    "parta/images/3_3_old_man_brightened-original_vs_brightened.png": {
+      "sha256": "704320d845899c50d66ebc10c0b7f794498b54ea57dc322541cf2e1fcebad2d7",
+      "bytes": 2354007
+    },
+    "parta/images/3_3_old_man_campfire-anagram_1_comparison.png": {
+      "sha256": "156b14ea2bce784b981a0170a06208e672ec0c8d4131d2be3f1a3e3a7fdced50",
+      "bytes": 1135387
+    },
+    "parta/images/3_3_village_horse-comparison.png": {
+      "sha256": "53670005598c31676d4531d062504990ffb6fde5d0ff4ebf280c482fea5b2a7f",
+      "bytes": 1852790
+    },
+    "parta/images/3_4_forest_cat_retry1-hybrid_comparison.png": {
+      "sha256": "922d458c04b8e721c9a93c37a7fcdde0f2559aa54a924abc62d3a26bbff24189",
+      "bytes": 284635
+    },
+    "parta/images/3_4_waterfall_skull-hybrid_1_comparison.png": {
+      "sha256": "8112997b5dff106d0e18d5ebeb5b857e64bd84e7d3f10c61eed6c7a1b8e1ce56",
+      "bytes": 602958
     },
     "parta/images/course_logo_design.png": {
       "sha256": "c129863e5614ea3960fc18a43d36e7e706a5b1fc02834a035a70473b12fe5aac",
@@ -34,6 +86,10 @@
       "sha256": "1359e2803b735523cec29291614da6fab322f58bea1176417e361bc89ed32acb",
       "bytes": 1265214
     },
+    "parta/images/grad_jigsaw_woman_flowers-comparison.png": {
+      "sha256": "c7b007d2d47bb983ce2f8be432ee40a9041b7100f982d20b216246bba73cbb1a",
+      "bytes": 829388
+    },
     "parta/images/great_wave_sdedit.png": {
       "sha256": "01c891ae4a8aa32d8ad3942d37065b12f1d278fad79e65126f51b7c1f1e3bc78",
       "bytes": 3261129
@@ -41,6 +97,42 @@
     "parta/images/rotate90_lighthouse_train.png": {
       "sha256": "c3f2293cca163d2c662d96ded45e7420783602cdf2a34ba3da498a33de7db2ee",
       "bytes": 1427368
+    },
+    "parta/images/section11-training_inputs.png": {
+      "sha256": "8028378c3d2937329298e7d195249084c40aaafffe8f7ef38c55c0bbf3cfdd8f",
+      "bytes": 1841383
+    },
+    "parta/images/section12-gaussian_blur_comparison.png": {
+      "sha256": "374fe1462510565f8b3d1ab09e56cc09cc26922dbfaa53a7af04d8943b6f3eff",
+      "bytes": 3815852
+    },
+    "parta/images/section13-one_step_comparison.png": {
+      "sha256": "a0a8b1796047ae6087f9453b4022fb2d7a5b20773f66de091e24af943d148f7d",
+      "bytes": 4700816
+    },
+    "parta/images/section14-velocity_diagnostics.png": {
+      "sha256": "4f4e648dfe5cc9c040cf7223feeb51c966ab0c1f8fd1082fae10e89a17252424",
+      "bytes": 12321739
+    },
+    "parta/images/section15-denoising_comparison.png": {
+      "sha256": "93f6cd3008f88dc64b2fabb3c7689aa649c33a1373e53e03ac721160f1b21316",
+      "bytes": 2901075
+    },
+    "parta/images/section15-euler_trajectory.png": {
+      "sha256": "8bc1d1f3dc68731f03d2cca5aff1cd87ccdff8d0c565a8f89fb5d071d38770ad",
+      "bytes": 9068001
+    },
+    "parta/images/section16-generated_samples.png": {
+      "sha256": "acefa792ea351605d7710eeefe80173baa7108fb0b46d695885001bf97594216",
+      "bytes": 1963803
+    },
+    "parta/images/section21-cfg_comparison.png": {
+      "sha256": "d3a48f1e52468cfb00a8495dc5da89f0a7f5568c6c29a6a0f6fab134368a198d",
+      "bytes": 6195503
+    },
+    "parta/report_content.json": {
+      "sha256": "7c338a0f47c30dd94bcd9d94c8d80db3bb2c397650168fb45e6a1c9061a28634",
+      "bytes": 9582
     },
     "partb/evidence_manifest.json": {
       "sha256": "6a6f2df7929afccd69ca9df0fe28696793016892d366d2ce80079699a96a36f2",
@@ -163,8 +255,8 @@
       "bytes": 6573
     },
     "report.html": {
-      "sha256": "25a897f5a8313d8481981a41808fed94c92fb4b5d1de7f94288481453e08d1ea",
-      "bytes": 40694
+      "sha256": "4e809b60d658eb850de9977b0b497ca16cb07f015435e6ebd015112019085ed4",
+      "bytes": 70395
     }
   }
 }

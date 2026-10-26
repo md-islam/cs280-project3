@@ -1,46 +1,485 @@
 {
   "figures": [
     {
+      "figure_id": "parta-section11-training_inputs",
+      "archive_filename": "CS280A_PartA_Sections1_2_FigureHandoff.zip",
+      "archive_sha256": "831e89d014a8080df75f1ad49a9d9e9504628d4eeb511320ee876de77a4dbee0",
+      "archive_member": "figures/section1_1/training_inputs.png",
+      "png_sha256": "8028378c3d2937329298e7d195249084c40aaafffe8f7ef38c55c0bbf3cfdd8f",
+      "report_section": "a11",
+      "verification_status": "verified",
+      "input_identifier": "clock_tower",
+      "seeds": [
+        180
+      ]
+    },
+    {
+      "figure_id": "parta-section12-gaussian_blur_comparison",
+      "archive_filename": "CS280A_PartA_Sections1_2_FigureHandoff.zip",
+      "archive_sha256": "831e89d014a8080df75f1ad49a9d9e9504628d4eeb511320ee876de77a4dbee0",
+      "archive_member": "figures/section1_2/gaussian_blur_comparison.png",
+      "png_sha256": "374fe1462510565f8b3d1ab09e56cc09cc26922dbfaa53a7af04d8943b6f3eff",
+      "report_section": "a12",
+      "verification_status": "verified",
+      "input_identifier": "clock_tower",
+      "seeds": [
+        180
+      ]
+    },
+    {
+      "figure_id": "parta-section13-one_step_comparison",
+      "archive_filename": "CS280A_PartA_Sections1_2_FigureHandoff.zip",
+      "archive_sha256": "831e89d014a8080df75f1ad49a9d9e9504628d4eeb511320ee876de77a4dbee0",
+      "archive_member": "figures/section1_3/one_step_comparison.png",
+      "png_sha256": "a0a8b1796047ae6087f9453b4022fb2d7a5b20773f66de091e24af943d148f7d",
+      "report_section": "a13",
+      "verification_status": "verified",
+      "input_identifier": "clock_tower",
+      "seeds": [
+        180
+      ]
+    },
+    {
+      "figure_id": "parta-section14-velocity_diagnostics",
+      "archive_filename": "CS280A_PartA_Sections1_2_FigureHandoff.zip",
+      "archive_sha256": "831e89d014a8080df75f1ad49a9d9e9504628d4eeb511320ee876de77a4dbee0",
+      "archive_member": "figures/section1_4/velocity_diagnostics.png",
+      "png_sha256": "4f4e648dfe5cc9c040cf7223feeb51c966ab0c1f8fd1082fae10e89a17252424",
+      "report_section": "a14",
+      "verification_status": "verified",
+      "input_identifier": "clock_tower",
+      "seeds": [
+        180
+      ]
+    },
+    {
+      "figure_id": "parta-section15-euler_trajectory",
+      "archive_filename": "CS280A_PartA_Sections1_2_FigureHandoff.zip",
+      "archive_sha256": "831e89d014a8080df75f1ad49a9d9e9504628d4eeb511320ee876de77a4dbee0",
+      "archive_member": "figures/section1_5/euler_trajectory.png",
+      "png_sha256": "8bc1d1f3dc68731f03d2cca5aff1cd87ccdff8d0c565a8f89fb5d071d38770ad",
+      "report_section": "a15",
+      "verification_status": "verified",
+      "input_identifier": "clock_tower",
+      "seeds": [
+        180
+      ]
+    },
+    {
+      "figure_id": "parta-section15-denoising_comparison",
+      "archive_filename": "CS280A_PartA_Sections1_2_FigureHandoff.zip",
+      "archive_sha256": "831e89d014a8080df75f1ad49a9d9e9504628d4eeb511320ee876de77a4dbee0",
+      "archive_member": "figures/section1_5/denoising_comparison.png",
+      "png_sha256": "93f6cd3008f88dc64b2fabb3c7689aa649c33a1373e53e03ac721160f1b21316",
+      "report_section": "a15",
+      "verification_status": "verified",
+      "input_identifier": "clock_tower",
+      "seeds": [
+        180
+      ]
+    },
+    {
+      "figure_id": "parta-section16-generated_samples",
+      "archive_filename": "CS280A_PartA_Sections1_2_FigureHandoff.zip",
+      "archive_sha256": "831e89d014a8080df75f1ad49a9d9e9504628d4eeb511320ee876de77a4dbee0",
+      "archive_member": "figures/section1_6/generated_samples.png",
+      "png_sha256": "acefa792ea351605d7710eeefe80173baa7108fb0b46d695885001bf97594216",
+      "report_section": "a16",
+      "verification_status": "verified",
+      "input_identifier": null,
+      "seeds": [
+        180,
+        181,
+        182,
+        183,
+        184
+      ]
+    },
+    {
+      "figure_id": "parta-section21-cfg_comparison",
+      "archive_filename": "CS280A_PartA_Sections1_2_FigureHandoff.zip",
+      "archive_sha256": "831e89d014a8080df75f1ad49a9d9e9504628d4eeb511320ee876de77a4dbee0",
+      "archive_member": "figures/section2_1/cfg_comparison.png",
+      "png_sha256": "d3a48f1e52468cfb00a8495dc5da89f0a7f5568c6c29a6a0f6fab134368a198d",
+      "report_section": "a21",
+      "verification_status": "verified",
+      "input_identifier": null,
+      "seeds": [
+        180,
+        181,
+        182,
+        183,
+        184
+      ]
+    },
+    {
+      "figure_id": "parta-3_1_campanile-campanile_edits",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_1_campanile/campanile_edits.png",
+      "png_sha256": "d369122ac34d8f95ff478376be281d892dd6481a22e69c0ea121bf8d4f8581a1",
+      "report_section": "a31",
+      "verification_status": "verified",
+      "experiment_id": "3_1_campanile",
+      "metadata_member": "figures/3_1_campanile/campanile_summary.json",
+      "metadata_sha256": "4da66f359575f261a9c0a04c6989d08f2d75dc8ddb4536be555aa66162be4c66",
+      "input_identifier": "campanile",
+      "review_status": "reviewed",
+      "additional_parameters": {}
+    },
+    {
+      "figure_id": "parta-3_1_clock_tower-personal_1_edits",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_1_clock_tower/personal_1_edits.png",
+      "png_sha256": "6f603fc421827dc75994fdb9a2a50a91a8a7dda695c6e7a9ebc947c2edf4f1ea",
+      "report_section": "a31",
+      "verification_status": "verified",
+      "experiment_id": "3_1_clock_tower",
+      "metadata_member": "figures/3_1_clock_tower/personal_1_summary.json",
+      "metadata_sha256": "5881dadf91c00160560511403cfd2bb3a1fdbdbf54f7c60487c466be16c4204c",
+      "input_identifier": "clock_tower",
+      "review_status": "reviewed",
+      "additional_parameters": {}
+    },
+    {
+      "figure_id": "parta-3_1_range_rover-personal_2_edits",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_1_range_rover/personal_2_edits.png",
+      "png_sha256": "843641aaf7e0a0e007782dfdbd83b08753b270c8f2f439979134ba826dadc620",
+      "report_section": "a31",
+      "verification_status": "verified",
+      "experiment_id": "3_1_range_rover",
+      "metadata_member": "figures/3_1_range_rover/personal_2_summary.json",
+      "metadata_sha256": "0775add8a357d63cb5a883a691d6584877c80942158a014ee4245650aba2fc5f",
+      "input_identifier": "range_rover",
+      "review_status": "reviewed",
+      "additional_parameters": {}
+    },
+    {
       "figure_id": "parta-great-wave-sdedit",
-      "archive_filename": "CS280A_PartA_Section3_1_Web1_Backup.zip",
-      "archive_sha256": "2459c1da4949688aafe523e4f7ec4c18a80f25c3a164b358aaf26a47a2d33bab",
-      "archive_member": "section3_1_web_1/comparison.png",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_1_web_wave/comparison.png",
       "png_sha256": "01c891ae4a8aa32d8ad3942d37065b12f1d278fad79e65126f51b7c1f1e3bc78",
-      "metadata_member": "section3_1_web_1/metadata.json",
-      "metadata_sha256": "e744f58012aa6bf09f065af1b3819ba0d5eceb7ff0f50a30780b53e888748d7c"
+      "report_section": "a31",
+      "verification_status": "verified",
+      "experiment_id": "web_1",
+      "metadata_member": "figures/3_1_web_wave/metadata.json",
+      "metadata_sha256": "e744f58012aa6bf09f065af1b3819ba0d5eceb7ff0f50a30780b53e888748d7c",
+      "input_identifier": "web_wave",
+      "review_status": "reviewed",
+      "additional_parameters": {
+        "predictions_by_time": {
+          "0.02": 98,
+          "0.04": 96,
+          "0.06": 94,
+          "0.10": 90,
+          "0.14": 86,
+          "0.25": 76,
+          "0.50": 50
+        }
+      }
+    },
+    {
+      "figure_id": "parta-3_1_house_illustration-comparison",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_1_house_illustration/comparison.png",
+      "png_sha256": "f5da633f0948a5d6b547b41cf3327add45e22700dafe1dad7a0cb819b2d9eb71",
+      "report_section": "a31",
+      "verification_status": "verified",
+      "experiment_id": "handdrawing_1",
+      "metadata_member": "figures/3_1_house_illustration/metadata.json",
+      "metadata_sha256": "bebb174268c4245af330615b32d8e6aa6398dae7e88240bbdf40172fdb861f1e",
+      "input_identifier": "house_illustration",
+      "review_status": "source_authorship_blocker",
+      "additional_parameters": {
+        "predictions_by_time": {
+          "0.02": 98,
+          "0.04": 96,
+          "0.06": 94,
+          "0.10": 90,
+          "0.14": 86,
+          "0.25": 76,
+          "0.50": 50
+        }
+      }
+    },
+    {
+      "figure_id": "parta-3_1_sailboat_illustration_seed197-comparison",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_1_sailboat_illustration_seed197/comparison.png",
+      "png_sha256": "11ad4e9c9a08b0b10517ac06493ad05b6eaef3cac87613d37fa2c5dc50b9c5f1",
+      "report_section": "a31",
+      "verification_status": "verified",
+      "experiment_id": "handdrawing_2_replacement",
+      "metadata_member": "figures/3_1_sailboat_illustration_seed197/metadata.json",
+      "metadata_sha256": "7f09b1ab13988c0ced9d4ebdcb8136e12d0a72117206242feb921e8f90643e20",
+      "input_identifier": "sailboat_illustration_seed197",
+      "review_status": "source_authorship_blocker",
+      "additional_parameters": {
+        "contrast_factor": 2.5,
+        "predictions_by_time": {
+          "0.02": 98,
+          "0.04": 96,
+          "0.06": 94,
+          "0.10": 90,
+          "0.14": 86,
+          "0.25": 76,
+          "0.50": 50
+        },
+        "prior_seed": 196
+      }
+    },
+    {
+      "figure_id": "parta-3_2_campanile-campanile_text_guided",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_2_campanile/campanile_text_guided.png",
+      "png_sha256": "4829aab69bf2ef010968fe45e2d1008b47ff8f999ecfed11e684d22e8a89228e",
+      "report_section": "a32",
+      "verification_status": "verified",
+      "experiment_id": "3_2_campanile",
+      "metadata_member": "figures/3_2_campanile/campanile_text_guided_summary.json",
+      "metadata_sha256": "651e86b5f394dc67a86915f5cb34bfdf2ef9e51497aed873c798f79746a6b441",
+      "input_identifier": "campanile",
+      "review_status": "reviewed",
+      "additional_parameters": {}
+    },
+    {
+      "figure_id": "parta-3_2_clock_tower-clock_tower_text_guided",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_2_clock_tower/clock_tower_text_guided.png",
+      "png_sha256": "8f2ff4d26f66cf198c754d051c5e21b5b950cc9343a169d556ad38d89c22703c",
+      "report_section": "a32",
+      "verification_status": "verified",
+      "experiment_id": "3_2_clock_tower",
+      "metadata_member": "figures/3_2_clock_tower/clock_tower_text_guided_summary.json",
+      "metadata_sha256": "abb454d5618aa45595d3b9a1f19388f328afbf4ab31e6a7974a2bdcb41fc101b",
+      "input_identifier": "clock_tower",
+      "review_status": "reviewed",
+      "additional_parameters": {}
+    },
+    {
+      "figure_id": "parta-3_2_range_rover-range_rover_text_guided",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_2_range_rover/range_rover_text_guided.png",
+      "png_sha256": "ba65af593857ba95c1b3d521213964a3f521179cb985da754bc9276aa1cf0157",
+      "report_section": "a32",
+      "verification_status": "verified",
+      "experiment_id": "3_2_range_rover",
+      "metadata_member": "figures/3_2_range_rover/range_rover_text_guided_summary.json",
+      "metadata_sha256": "2569dc760bd5d0ec6978ca910d344e57e0ccd1a02e6fa127ef6a3c0c301ee8dd",
+      "input_identifier": "range_rover",
+      "review_status": "reviewed",
+      "additional_parameters": {}
+    },
+    {
+      "figure_id": "parta-3_3_old_man_campfire-anagram_1_comparison",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_3_old_man_campfire/anagram_1_comparison.png",
+      "png_sha256": "156b14ea2bce784b981a0170a06208e672ec0c8d4131d2be3f1a3e3a7fdced50",
+      "report_section": "a33",
+      "verification_status": "verified",
+      "experiment_id": "anagram_1",
+      "metadata_member": "figures/3_3_old_man_campfire/anagram_1_summary.json",
+      "metadata_sha256": "a07732b2431707dcce38252be8d36ce573ae12feb7cfafd59d74f6c8fccda443",
+      "input_identifier": null,
+      "review_status": "reviewed",
+      "additional_parameters": {
+        "model_predictions": 200
+      }
+    },
+    {
+      "figure_id": "parta-3_3_old_man_brightened-original_vs_brightened",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_3_old_man_brightened/original_vs_brightened.png",
+      "png_sha256": "704320d845899c50d66ebc10c0b7f794498b54ea57dc322541cf2e1fcebad2d7",
+      "report_section": "a33",
+      "verification_status": "verified",
+      "experiment_id": "3_3_old_man_brightened",
+      "metadata_member": "figures/3_3_old_man_brightened/metadata.json",
+      "metadata_sha256": "6b4109ed22be3a5cb1938d58a9c6be63fb8d2e1bc4cd4f8a75873cdb470e061f",
+      "input_identifier": null,
+      "review_status": "presentation_only",
+      "additional_parameters": {
+        "gamma": 0.55
+      }
+    },
+    {
+      "figure_id": "parta-3_3_village_horse-comparison",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_3_village_horse/comparison.png",
+      "png_sha256": "53670005598c31676d4531d062504990ffb6fde5d0ff4ebf280c482fea5b2a7f",
+      "report_section": "a33",
+      "verification_status": "verified",
+      "experiment_id": "anagram_2_retry2",
+      "metadata_member": "figures/3_3_village_horse/summary.json",
+      "metadata_sha256": "a25024cadfb76399a0ca51ea9268f6bc4ff0b34e8cb8079ae83b3c411fb3df73",
+      "input_identifier": null,
+      "review_status": "reviewed",
+      "additional_parameters": {
+        "model_predictions": 200,
+        "prompt_screen": [
+          {
+            "pair": "village / horse",
+            "mean": 0.043381668627262115,
+            "std": 1.1049480438232422,
+            "outside_fraction": 0.4025624692440033,
+            "score": 0.4918882757425308
+          },
+          {
+            "pair": "woman / flowers",
+            "mean": 0.39162397384643555,
+            "std": 0.7574058771133423,
+            "outside_fraction": 0.24162547290325165,
+            "score": 0.8664988934993744
+          },
+          {
+            "pair": "fox / forest",
+            "mean": -0.895747184753418,
+            "std": 0.8933874368667603,
+            "outside_fraction": 0.41392645239830017,
+            "score": 2.2193472743034364
+          },
+          {
+            "pair": "lighthouse / portrait",
+            "mean": 0.6666744947433472,
+            "std": 1.3739161491394043,
+            "outside_fraction": 0.6366691589355469,
+            "score": 2.206687307357788
+          }
+        ]
+      }
+    },
+    {
+      "figure_id": "parta-3_4_waterfall_skull-hybrid_1_comparison",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_4_waterfall_skull/hybrid_1_comparison.png",
+      "png_sha256": "8112997b5dff106d0e18d5ebeb5b857e64bd84e7d3f10c61eed6c7a1b8e1ce56",
+      "report_section": "a34",
+      "verification_status": "verified",
+      "experiment_id": "hybrid_1",
+      "metadata_member": "figures/3_4_waterfall_skull/hybrid_1_summary.json",
+      "metadata_sha256": "40dd87ba96a73ff4a2c64212d1bb4daa56705f3b5c20b7107c5234364d4ba81b",
+      "input_identifier": null,
+      "review_status": "provisional_illusion",
+      "additional_parameters": {
+        "gaussian_kernel_size": 265,
+        "gaussian_sigma": 16.0,
+        "model_predictions": 200
+      }
+    },
+    {
+      "figure_id": "parta-3_4_forest_cat_retry1-hybrid_comparison",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/3_4_forest_cat_retry1/hybrid_comparison.png",
+      "png_sha256": "922d458c04b8e721c9a93c37a7fcdde0f2559aa54a924abc62d3a26bbff24189",
+      "report_section": "a34",
+      "verification_status": "verified",
+      "experiment_id": "hybrid_2_retry1",
+      "metadata_member": "figures/3_4_forest_cat_retry1/metadata.json",
+      "metadata_sha256": "54c86a901b3fc2e8cc4fb4976977f88924d6ab47dac63cd42d8e160ac70d5c33",
+      "input_identifier": null,
+      "review_status": "provisional_illusion",
+      "additional_parameters": {
+        "gaussian_kernel_size": 265,
+        "gaussian_sigma": 16,
+        "model_predictions": 200
+      }
     },
     {
       "figure_id": "parta-rotate90-lighthouse-train",
-      "archive_filename": "CS280A_PartA_Grad_Rotate90_1.zip",
-      "archive_sha256": "b800650a4293b9247a644b18e4738b99800d8fd7b23d72576185d030fc54dba9",
-      "archive_member": "section3_3_grad_rotate90_1/comparison.png",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/grad_rotate90_lighthouse_train/comparison.png",
       "png_sha256": "c3f2293cca163d2c662d96ded45e7420783602cdf2a34ba3da498a33de7db2ee",
-      "metadata_member": "section3_3_grad_rotate90_1/metadata.json",
-      "metadata_sha256": "9dd89014621f55c2f63e533bec29e6034975bee8425770ff57fe321000a672c6"
+      "report_section": "a-graduate",
+      "verification_status": "verified",
+      "experiment_id": "rotate90_1",
+      "metadata_member": "figures/grad_rotate90_lighthouse_train/metadata.json",
+      "metadata_sha256": "9dd89014621f55c2f63e533bec29e6034975bee8425770ff57fe321000a672c6",
+      "input_identifier": null,
+      "review_status": "reviewed",
+      "additional_parameters": {
+        "model_predictions": 200
+      }
     },
     {
-      "figure_id": "parta-course-logo-design",
-      "archive_filename": "CS280A_PartA_Grad_CourseLogo_1.zip",
-      "archive_sha256": "03f791e9236f9a61ac511fc9eb52ffd115b5b93ee0ac60468ef27263246d7993",
-      "archive_member": "grad_course_logo_1/course_logo_design.png",
-      "png_sha256": "c129863e5614ea3960fc18a43d36e7e706a5b1fc02834a035a70473b12fe5aac",
-      "metadata_member": "grad_course_logo_1/metadata.json",
-      "metadata_sha256": "de02d8c06deaba02d507c7058651a129cf335632e3572dbaed6024cb697be6bd"
+      "figure_id": "parta-grad_jigsaw_woman_flowers-comparison",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/grad_jigsaw_woman_flowers/comparison.png",
+      "png_sha256": "c7b007d2d47bb983ce2f8be432ee40a9041b7100f982d20b216246bba73cbb1a",
+      "report_section": "a-graduate",
+      "verification_status": "verified",
+      "experiment_id": "jigsaw_retry1",
+      "metadata_member": "figures/grad_jigsaw_woman_flowers/metadata.json",
+      "metadata_sha256": "fb462b8f756d2206662c60f607405ca3b3b31196409598a91a610b120289029c",
+      "input_identifier": null,
+      "review_status": "provisional_illusion",
+      "additional_parameters": {
+        "model_predictions": 200,
+        "prior_seed": 192
+      }
     },
     {
       "figure_id": "parta-course-logo-process",
-      "archive_filename": "CS280A_PartA_Grad_CourseLogo_1.zip",
-      "archive_sha256": "03f791e9236f9a61ac511fc9eb52ffd115b5b93ee0ac60468ef27263246d7993",
-      "archive_member": "grad_course_logo_1/comparison.png",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/grad_course_logo/comparison.png",
       "png_sha256": "1359e2803b735523cec29291614da6fab322f58bea1176417e361bc89ed32acb",
-      "metadata_member": "grad_course_logo_1/metadata.json",
-      "metadata_sha256": "de02d8c06deaba02d507c7058651a129cf335632e3572dbaed6024cb697be6bd"
+      "report_section": "a-graduate",
+      "verification_status": "verified",
+      "experiment_id": "grad_course_logo",
+      "metadata_member": "figures/grad_course_logo/metadata.json",
+      "metadata_sha256": "de02d8c06deaba02d507c7058651a129cf335632e3572dbaed6024cb697be6bd",
+      "input_identifier": null,
+      "review_status": "reviewed",
+      "additional_parameters": {
+        "predictions_by_time": {
+          "0.3": 70,
+          "0.5": 50
+        },
+        "original_sketch_sha256": "fd44ddc80bfc199923cb76d056b866fbb842643f2cc3e4bee6833108eac9ca19"
+      }
+    },
+    {
+      "figure_id": "parta-course-logo-design",
+      "archive_filename": "CS280A_PartA_Section3_Graduate_FigureHandoff.zip",
+      "archive_sha256": "740a9f8c666899babf23a6ad8e3fa160553eb767c6e9b8622153d64c6708ecae",
+      "archive_member": "figures/grad_course_logo/course_logo_design.png",
+      "png_sha256": "c129863e5614ea3960fc18a43d36e7e706a5b1fc02834a035a70473b12fe5aac",
+      "report_section": "a-graduate",
+      "verification_status": "verified",
+      "experiment_id": "grad_course_logo",
+      "metadata_member": "figures/grad_course_logo/metadata.json",
+      "metadata_sha256": "de02d8c06deaba02d507c7058651a129cf335632e3572dbaed6024cb697be6bd",
+      "input_identifier": null,
+      "review_status": "reviewed",
+      "additional_parameters": {
+        "predictions_by_time": {
+          "0.3": 70,
+          "0.5": 50
+        },
+        "original_sketch_sha256": "fd44ddc80bfc199923cb76d056b866fbb842643f2cc3e4bee6833108eac9ca19"
+      }
     }
   ],
-  "review_scope": "Factual captions and settings checked against archive metadata and the approved handoff. Content approval comes from the Part A workstream; no independent subjective visual review is claimed.",
+  "review_scope": "Verified archive-member bytes, dimensions and recorded settings. Visual limitations and missing historical generators are disclosed in the report.",
   "source_attribution": {
-    "great_wave": "Hokusai, The Great Wave off Kanagawa; Wikimedia Commons",
+    "great_wave": "Katsushika Hokusai, The Great Wave off Kanagawa; Wikimedia Commons",
     "source_page_url": "https://commons.wikimedia.org/wiki/File:The_Great_Wave_off_Kanagawa.jpg",
-    "original_jpeg_independently_verified": false
+    "original_jpeg_independently_verified": true
   }
 }

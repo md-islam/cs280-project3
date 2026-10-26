@@ -1,0 +1,167 @@
+{
+  "schema_version": 2,
+  "figures": [
+    {
+      "section_id": "a31",
+      "figure_id": "parta-great-wave-sdedit",
+      "experiment_id": "section3_1_web_1",
+      "experiment_type": "editing_sweep",
+      "source_filename": "great_wave_sdedit.png",
+      "sha256": "01c891ae4a8aa32d8ad3942d37065b12f1d278fad79e65126f51b7c1f1e3bc78",
+      "width": 2080,
+      "height": 1040,
+      "settings": {
+        "seed": 194,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a high quality photo",
+        "starting_times": [
+          0.02,
+          0.04,
+          0.06,
+          0.1,
+          0.14,
+          0.25,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "SDEdit of Hokusai’s The Great Wave off Kanagawa, sourced via Wikimedia Commons. The comparison records edits at starting times 0.02, 0.04, 0.06, 0.10, 0.14, 0.25 and 0.50 using the prompt “a high quality photo,” seed 194, Part A guidance coefficient 7 and Euler step size 0.02. Larger starting times inject more noise before denoising. The original source JPEG was not independently verified in this integration audit.",
+      "caption_status": "reviewed",
+      "alt_text": "Original Great Wave image and seven SDEdit outputs labeled with their starting times.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/great_wave_sdedit.png",
+      "image_path": "parta/images/great_wave_sdedit.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a-graduate",
+      "figure_id": "parta-rotate90-lighthouse-train",
+      "experiment_id": "section3_3_grad_rotate90_1",
+      "experiment_type": "graduate_transformation",
+      "source_filename": "rotate90_lighthouse_train.png",
+      "sha256": "c3f2293cca163d2c662d96ded45e7420783602cdf2a34ba3da498a33de7db2ee",
+      "width": 1540,
+      "height": 700,
+      "settings": {
+        "seed": 191,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt_pair": [
+          "a black and white lithograph of a tall lighthouse with a pointed roof",
+          "a black and white lithograph of a long steam locomotive on railway tracks"
+        ],
+        "sampling_steps": 50,
+        "initial_noise_sha256": "645313ce248aef19adc6760e2a0d7c8614ece92523a08a38ec6e638982bc5632",
+        "transformation": {
+          "name": "90-degree counterclockwise rotation",
+          "definition": "torch.rot90(x, 1, dims=(-2, -1)); inverse: torch.rot90(x, -1, dims=(-2, -1))"
+        }
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "CS 280A graduate rotational visual anagram: the same generated image is presented upright with the lighthouse prompt and rotated 90 degrees counterclockwise with the steam-locomotive prompt. The rotated PNG is an exact pixel rotation of the upright PNG. Seed 191; 50 Euler steps of size 0.02; Part A guidance coefficient 7. These are the intended paired interpretations from the previously content-approved Part A experiment, not a new subjective evaluation.",
+      "caption_status": "reviewed",
+      "alt_text": "Two orientations of one generated image, labeled for the upright lighthouse and rotated steam-locomotive prompts.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/rotate90_lighthouse_train.png",
+      "image_path": "parta/images/rotate90_lighthouse_train.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a-graduate",
+      "figure_id": "parta-course-logo-design",
+      "experiment_id": "grad_course_logo_1",
+      "experiment_type": "course_logo",
+      "source_filename": "course_logo_design.png",
+      "sha256": "c129863e5614ea3960fc18a43d36e7e706a5b1fc02834a035a70473b12fe5aac",
+      "width": 512,
+      "height": 640,
+      "settings": {
+        "seed": 193,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a beautifully designed flat vector emblem for a university computer vision course, a stylized clock tower at the center of a camera lens, clean geometric shapes, deep navy blue and warm California gold, cream background, elegant minimal graphic design",
+        "starting_times": [
+          0.3,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "CS 280A graduate course-logo final design. An original programmatically generated sketch was refined with PixNerd-guided SDEdit at starting times 0.30 and 0.50. The t=0.50 edit was selected, and typography was subsequently added using PIL. Seed 193; Part A guidance coefficient 7; Euler step size 0.02. The typography is postprocessing, not text generated by the flow model.",
+      "caption_status": "reviewed",
+      "alt_text": "Final course-logo design with typography added after the selected t=0.50 SDEdit refinement.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/course_logo_design.png",
+      "image_path": "parta/images/course_logo_design.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    },
+    {
+      "section_id": "a-graduate",
+      "figure_id": "parta-course-logo-process",
+      "experiment_id": "grad_course_logo_1",
+      "experiment_type": "course_logo",
+      "source_filename": "course_logo_process.png",
+      "sha256": "1359e2803b735523cec29291614da6fab322f58bea1176417e361bc89ed32acb",
+      "width": 2100,
+      "height": 672,
+      "settings": {
+        "seed": 193,
+        "guidance": {
+          "formula": "v_cond + w * (v_cond - v_uncond)",
+          "coefficient": 7
+        },
+        "euler_step_size": 0.02,
+        "model_revision": "9fa8836b553976b88a3b27649ed1628499e02bf9",
+        "prompt": "a beautifully designed flat vector emblem for a university computer vision course, a stylized clock tower at the center of a camera lens, clean geometric shapes, deep navy blue and warm California gold, cream background, elegant minimal graphic design",
+        "starting_times": [
+          0.3,
+          0.5
+        ]
+      },
+      "settings_status": "verified_recorded",
+      "completion_status": "complete",
+      "approved_for_report": true,
+      "caption": "CS 280A graduate course-logo process comparison. An original programmatically generated sketch was refined with PixNerd-guided SDEdit at starting times 0.30 and 0.50. The t=0.50 edit was selected, and typography was subsequently added using PIL. Seed 193; Part A guidance coefficient 7; Euler step size 0.02. The typography is postprocessing, not text generated by the flow model.",
+      "caption_status": "reviewed",
+      "alt_text": "Course-logo process grid comparing the programmatic sketch, two SDEdit refinements and final typographic design.",
+      "observation_status": "reviewed",
+      "destination": "parta/images/course_logo_process.png",
+      "image_path": "parta/images/course_logo_process.png",
+      "intentional_reuse": false,
+      "verification": {
+        "status": "byte-identical",
+        "method": "Source SHA256, static PNG decode, dimensions and recorded approval validated offline"
+      }
+    }
+  ]
+}

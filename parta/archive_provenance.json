@@ -1,0 +1,46 @@
+{
+  "figures": [
+    {
+      "figure_id": "parta-great-wave-sdedit",
+      "archive_filename": "CS280A_PartA_Section3_1_Web1_Backup.zip",
+      "archive_sha256": "2459c1da4949688aafe523e4f7ec4c18a80f25c3a164b358aaf26a47a2d33bab",
+      "archive_member": "section3_1_web_1/comparison.png",
+      "png_sha256": "01c891ae4a8aa32d8ad3942d37065b12f1d278fad79e65126f51b7c1f1e3bc78",
+      "metadata_member": "section3_1_web_1/metadata.json",
+      "metadata_sha256": "e744f58012aa6bf09f065af1b3819ba0d5eceb7ff0f50a30780b53e888748d7c"
+    },
+    {
+      "figure_id": "parta-rotate90-lighthouse-train",
+      "archive_filename": "CS280A_PartA_Grad_Rotate90_1.zip",
+      "archive_sha256": "b800650a4293b9247a644b18e4738b99800d8fd7b23d72576185d030fc54dba9",
+      "archive_member": "section3_3_grad_rotate90_1/comparison.png",
+      "png_sha256": "c3f2293cca163d2c662d96ded45e7420783602cdf2a34ba3da498a33de7db2ee",
+      "metadata_member": "section3_3_grad_rotate90_1/metadata.json",
+      "metadata_sha256": "9dd89014621f55c2f63e533bec29e6034975bee8425770ff57fe321000a672c6"
+    },
+    {
+      "figure_id": "parta-course-logo-design",
+      "archive_filename": "CS280A_PartA_Grad_CourseLogo_1.zip",
+      "archive_sha256": "03f791e9236f9a61ac511fc9eb52ffd115b5b93ee0ac60468ef27263246d7993",
+      "archive_member": "grad_course_logo_1/course_logo_design.png",
+      "png_sha256": "c129863e5614ea3960fc18a43d36e7e706a5b1fc02834a035a70473b12fe5aac",
+      "metadata_member": "grad_course_logo_1/metadata.json",
+      "metadata_sha256": "de02d8c06deaba02d507c7058651a129cf335632e3572dbaed6024cb697be6bd"
+    },
+    {
+      "figure_id": "parta-course-logo-process",
+      "archive_filename": "CS280A_PartA_Grad_CourseLogo_1.zip",
+      "archive_sha256": "03f791e9236f9a61ac511fc9eb52ffd115b5b93ee0ac60468ef27263246d7993",
+      "archive_member": "grad_course_logo_1/comparison.png",
+      "png_sha256": "1359e2803b735523cec29291614da6fab322f58bea1176417e361bc89ed32acb",
+      "metadata_member": "grad_course_logo_1/metadata.json",
+      "metadata_sha256": "de02d8c06deaba02d507c7058651a129cf335632e3572dbaed6024cb697be6bd"
+    }
+  ],
+  "review_scope": "Factual captions and settings checked against archive metadata and the approved handoff. Content approval comes from the Part A workstream; no independent subjective visual review is claimed.",
+  "source_attribution": {
+    "great_wave": "Hokusai, The Great Wave off Kanagawa; Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:The_Great_Wave_off_Kanagawa.jpg",
+    "original_jpeg_independently_verified": false
+  }
+}

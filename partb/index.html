@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="description" content="CS 280A Project 3 Part B: genuine MNIST denoising and flow-matching experiments, controlled comparisons and graduate results.">
+<title>Part B · Flow Matching from Scratch | CS 280A Project 3</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<aside class="draft-notice" role="note"><strong>PREVIEW — NOT FINAL</strong> · Incomplete Part A handoff. Not authorized for publication.</aside>
+
+<a class="skip" href="#main">Skip to results</a>
+<header class="report-header">
+<p class="eyebrow">UC Berkeley · CS 280A · Fall 2026 · Project 3</p>
+<h1>Flow Matching<br>from Scratch</h1>
+<p class="dek">Part B · From a single-step denoiser to time- and class-conditioned MNIST generation.</p>
+<p class="report-note">Recorded Colab experiments · 27 genuine figures · Graduate Bells &amp; Whistles included</p>
+</header>
+<div class="layout">
+<nav aria-label="Report contents">
+<p class="nav-title">In this report</p>
+<a href="#b11">B1.1 · Architecture</a>
+<a href="#b12">B1.2 · Noise</a>
+<a href="#b121">B1.2.1 · Denoising</a>
+<a href="#b122">B1.2.2 · OOD</a>
+<a href="#b123">B1.2.3 · Pure noise</a>
+<a href="#b21">B2.1 · Time conditioning</a>
+<a href="#b22">B2.2 · Training</a>
+<a href="#b23">B2.3 · Sampling</a>
+<a href="#b24">B2.4 · Class conditioning</a>
+<a href="#b25">B2.5 · Training</a>
+<a href="#b26">B2.6 · Guided sampling</a>
+<a href="#b26-nosched">B2.6 · No scheduler</a>
+<a href="#b3">B3 · Graduate work</a>
+<a href="#evidence">Evidence & limitations</a>
+</nav>
+<main id="main">
+<div class="opening">
+<p class="eyebrow">Experimental overview</p>
+<p>A one-step denoiser can remove noise from a digit, but independent noise provides no clue to a specific target. Flow matching instead learns a velocity field that transports Gaussian noise toward the image distribution. This report follows that progression and compares class guidance, constant learning rate and extended time-only training.</p>
+<table>
+<caption>Training configurations used in the recorded experiments</caption>
+<thead>
+<tr>
+<th scope="col">Experiment</th>
+<th scope="col">Width D</th>
+<th scope="col">Batch</th>
+<th scope="col">Epochs</th>
+<th scope="col">Adam learning rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Denoising / pure noise</th>
+<td>128</td>
+<td>256</td>
+<td>5 each</td>
+<td>0.0001</td>
+</tr>
+<tr>
+<th scope="row">Time / class flow</th>
+<td>64</td>
+<td>64</td>
+<td>10 each</td>
+<td>0.01, exponential decay</td>
+</tr>
+<tr>
+<th scope="row">Independent no scheduler</th>
+<td>64</td>
+<td>64</td>
+<td>10</td>
+<td>0.003, constant</td>
+</tr>
+<tr>
+<th scope="row">Graduate time-only continuation</th>
+<td>64</td>
+<td>64</td>
+<td>10 + 20</td>
+<td>0.001 start, slower decay</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="b11" aria-labelledby="b11-heading">
+<p class="eyebrow">B1.1</p>
+<h2 id="b11-heading">A single-step denoising UNet</h2>
+<p>The unconditional UNet maps a 28 × 28 grayscale image to an image of the same shape. Convolutional blocks use batch normalization and GELU. Two downsampling stages reduce spatial resolution to 14 × 14 and 7 × 7; a pooled bottleneck is expanded before upsampling. Concatenated encoder features preserve local detail through skip connections. The final convolution is linear.</p>
+<p>For the denoising experiments, hidden width D = 128. The model learns to predict the clean image directly, minimizing pixelwise mean squared error (MSE).</p>
+</section>
+<section id="b12" aria-labelledby="b12-heading">
+<p class="eyebrow">B1.2</p>
+<h2 id="b12-heading">How noise changes the input</h2>
+<p>Clean MNIST pixels lie in [0, 1]. A single test image and Gaussian draw are held fixed while the scale changes: <span class="math">z = x + σε</span>, with ε ∼ N(0, I). Noise is unclipped for computation; clipping is used only for display.</p>
+<figure id="b12-noise" data-evidence-id="b12-noise">
+<a href="images/b12-noise.png" aria-label="Open full-size figure: A fixed MNIST 7 progressively obscured by seven Gaussian noise levels.">
+<img src="images/b12-noise.png" width="1389" height="225" alt="A fixed MNIST 7 progressively obscured by seven Gaussian noise levels." loading="eager">
+</a>
+<figcaption>The same test digit at σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8 and 1.0. <span class="source">Notebook cell 17, output 1.</span>
+</figcaption>
+</figure>
+</section>
+<section id="b121" aria-labelledby="b121-heading">
+<p class="eyebrow">B1.2.1</p>
+<h2 id="b121-heading">Learning to remove noise</h2>
+<p>Training uses only the shuffled MNIST training split, with fresh σ = 0.5 Gaussian noise at every batch: five epochs, batch size 256, D = 128, Adam learning rate 10<sup>−4</sup> and MSE. Fixed held-out test inputs allow an epoch-to-epoch comparison.</p>
+<figure id="b121-loss" data-evidence-id="b121-loss">
+<a href="images/b121-loss.png" aria-label="Open full-size figure: Denoiser training MSE drops sharply, then decreases more gradually across five epochs.">
+<img src="images/b121-loss.png" width="779" height="290" alt="Denoiser training MSE drops sharply, then decreases more gradually across five epochs." loading="eager">
+</a>
+<figcaption>Denoising loss across all optimizer steps, with the moving average overlaid. <span class="source">Notebook cell 24, output 1.</span>
+</figcaption>
+</figure>
+<figure id="b121-epoch-1" data-evidence-id="b121-epoch-1">
+<a href="images/b121-epoch-1.png" aria-label="Open full-size figure: Ten clean digits, their sigma 0.5 inputs, and recognizable but softened epoch-1 predictions.">
+<img src="images/b121-epoch-1.png" width="980" height="334" alt="Ten clean digits, their sigma 0.5 inputs, and recognizable but softened epoch-1 predictions." loading="eager">
+</a>
+<figcaption>Epoch 1. Rows: clean targets, noisy inputs, denoised predictions. <span class="source">Notebook cell 23, output 2.</span>
+</figcaption>
+</figure>
+<figure id="b121-epoch-5" data-evidence-id="b121-epoch-5">
+<a href="images/b121-epoch-5.png" aria-label="Open full-size figure: The same ten test digits with epoch-5 denoising predictions.">
+<img src="images/b121-epoch-5.png" width="980" height="334" alt="The same ten test digits with epoch-5 denoising predictions." loading="eager">
+</a>
+<figcaption>Epoch 5. The same clean targets and noisy inputs. <span class="source">Notebook cell 23, output 7.</span>
+</figcaption>
+</figure>
+<p>The loss falls rapidly early in training. Most digits are already recognizable after epoch 1; the epoch-5 predictions retain the target shapes while suppressing much of the noise. This is a visual assessment of the displayed test examples, not a measured test-set accuracy.</p>
+</section>
+<section id="b122" aria-labelledby="b122-heading">
+<p class="eyebrow">B1.2.2</p>
+<h2 id="b122-heading">Testing outside the training noise level</h2>
+<figure id="b122-ood" data-evidence-id="b122-ood">
+<a href="images/b122-ood.png" aria-label="Open full-size figure: A fixed 7 denoised at seven noise scales; the highest-noise predictions become distorted.">
+<img src="images/b122-ood.png" width="1374" height="593" alt="A fixed 7 denoised at seven noise scales; the highest-noise predictions become distorted." loading="eager">
+</a>
+<figcaption>Fixed clean image and Gaussian draw; columns vary σ. The model was trained at σ = 0.5. Rows: clean, noisy, denoised. <span class="source">Notebook cell 27, output 1.</span>
+</figcaption>
+</figure>
+<p>The model preserves a recognizable 7 at low and moderate noise, including the training level. At σ = 0.8 and 1.0, an extra lower stroke appears and the shape becomes ambiguous. The deterioration is most evident above the training noise level; these samples do not suggest equal failure at every departure from σ = 0.5.</p>
+</section>
+<section id="b123" aria-labelledby="b123-heading">
+<p class="eyebrow">B1.2.3</p>
+<h2 id="b123-heading">Why independent noise produces an average</h2>
+<p>A fresh D = 128 model repeats the five-epoch denoising setup, but its input is independent Gaussian noise and its target is a clean training digit. Adam uses 10<sup>−4</sup> and batch size 256.</p>
+<figure id="b123-loss" data-evidence-id="b123-loss">
+<a href="images/b123-loss.png" aria-label="Open full-size figure: Pure-noise training loss falls quickly and plateaus above the ordinary denoising loss.">
+<img src="images/b123-loss.png" width="788" height="290" alt="Pure-noise training loss falls quickly and plateaus above the ordinary denoising loss." loading="eager">
+</a>
+<figcaption>Pure-noise training loss over five epochs. <span class="source">Notebook cell 29, output 5.</span>
+</figcaption>
+</figure>
+<figure id="b123-epoch-1" data-evidence-id="b123-epoch-1">
+<a href="images/b123-epoch-1.png" aria-label="Open full-size figure: Different pure-noise inputs produce similar blurry central loops after epoch 1.">
+<img src="images/b123-epoch-1.png" width="980" height="334" alt="Different pure-noise inputs produce similar blurry central loops after epoch 1." loading="eager">
+</a>
+<figcaption>Epoch 1. Rows: clean targets, independent noise, predictions. <span class="source">Notebook cell 29, output 1.</span>
+</figcaption>
+</figure>
+<figure id="b123-epoch-5" data-evidence-id="b123-epoch-5">
+<a href="images/b123-epoch-5.png" aria-label="Open full-size figure: Epoch-5 pure-noise predictions remain visually similar averaged shapes rather than distinct digits.">
+<img src="images/b123-epoch-5.png" width="980" height="334" alt="Epoch-5 pure-noise predictions remain visually similar averaged shapes rather than distinct digits." loading="eager">
+</a>
+<figcaption>Epoch 5. The same held-out noise and target examples. <span class="source">Notebook cell 29, output 3.</span>
+</figcaption>
+</figure>
+<p>Both epochs show blurry, nearly identical central shapes with overlapping loops, rather than the distinct targets. Independent noise contains no information about which clean digit was selected. Under population MSE, the optimal prediction is the conditional mean:</p>
+<p class="equation">D*(ε) = E[x | ε] = E[x].</p>
+<p>Averaging differently shaped digits produces overlapping strokes. The observed similarity is consistent with this explanation; the model has not recovered a target digit from absent information.</p>
+</section>
+<section id="b21" aria-labelledby="b21-heading">
+<p class="eyebrow">B2.1</p>
+<h2 id="b21-heading">Predicting a flow, conditioned on time</h2>
+<p>The time-conditioned UNet uses D = 64. Two fully connected blocks embed one scalar time per image; their channel vectors multiply the expanded bottleneck and first upsampling features. The model predicts velocity rather than a clean image or noise.</p>
+<p class="equation">x<sub>t</sub> = (1 − t)x<sub>0</sub> + tx<sub>1</sub>, &nbsp; u = x<sub>1</sub> − x<sub>0</sub>.</p>
+<p>Here x<sub>0</sub> is independent standard Gaussian noise, x<sub>1</sub> is a clean MNIST image, and t is sampled continuously and uniformly from [0, 1). Training minimizes MSE between u<sub>θ</sub>(x<sub>t</sub>, t) and u. Time runs from noise at 0 toward data at 1.</p>
+</section>
+<section id="b22" aria-labelledby="b22-heading">
+<p class="eyebrow">B2.2</p>
+<h2 id="b22-heading">Training the time-conditioned model</h2>
+<p>Ten epochs use batch size 64, Adam initialized at 0.01, and an exponential learning-rate scheduler with γ = 0.1<sup>1/10</sup>, stepped after each epoch. Independent noise and continuous times are sampled anew for each fetched batch.</p>
+<figure id="b22-loss" data-evidence-id="b22-loss">
+<a href="images/b22-loss.png" aria-label="Open full-size figure: Time-conditioned velocity MSE drops rapidly and then improves more slowly.">
+<img src="images/b22-loss.png" width="790" height="290" alt="Time-conditioned velocity MSE drops rapidly and then improves more slowly." loading="eager">
+</a>
+<figcaption>Time-conditioned flow-matching loss over ten epochs. <span class="source">Notebook cell 39, output 2.</span>
+</figcaption>
+</figure>
+</section>
+<section id="b23" aria-labelledby="b23-heading">
+<p class="eyebrow">B2.3</p>
+<h2 id="b23-heading">Sampling the time-conditioned flow</h2>
+<p>Euler integration starts from 40 independent Gaussian images and updates x ← x + u<sub>θ</sub>(x, t)/50 at t = k/50, k = 0,…,49. The same CPU-generated initial noise (seed 184) is used for each checkpoint. Inference uses evaluation mode and disables gradients.</p>
+<figure id="b23-epoch-1" data-evidence-id="b23-epoch-1">
+<a href="images/b23-epoch-1.png" aria-label="Open full-size figure: Forty time-conditioned MNIST samples from the epoch-1 checkpoint.">
+<img src="images/b23-epoch-1.png" width="1029" height="449" alt="Forty time-conditioned MNIST samples from the epoch-1 checkpoint." loading="eager">
+</a>
+<figcaption>Time-only model, epoch 1; 40 samples, 50 Euler steps. No class labels are supplied. <span class="source">Notebook cell 41, output 1.</span>
+</figcaption>
+</figure>
+<figure id="b23-epoch-5" data-evidence-id="b23-epoch-5">
+<a href="images/b23-epoch-5.png" aria-label="Open full-size figure: Forty time-conditioned MNIST samples from the epoch-5 checkpoint.">
+<img src="images/b23-epoch-5.png" width="1029" height="449" alt="Forty time-conditioned MNIST samples from the epoch-5 checkpoint." loading="eager">
+</a>
+<figcaption>Time-only model, epoch 5; 40 samples, 50 Euler steps. No class labels are supplied. <span class="source">Notebook cell 41, output 2.</span>
+</figcaption>
+</figure>
+<figure id="b23-epoch-10" data-evidence-id="b23-epoch-10">
+<a href="images/b23-epoch-10.png" aria-label="Open full-size figure: Forty time-conditioned MNIST samples from the epoch-10 checkpoint.">
+<img src="images/b23-epoch-10.png" width="1029" height="449" alt="Forty time-conditioned MNIST samples from the epoch-10 checkpoint." loading="eager">
+</a>
+<figcaption>Time-only model, epoch 10; 40 samples, 50 Euler steps. No class labels are supplied. <span class="source">Notebook cell 41, output 3.</span>
+</figcaption>
+</figure>
+<p>Epoch 1 contains many fragments. Later samples form more coherent digits, although several shapes remain ambiguous at epoch 10. This motivates the graduate continuation experiment below.</p>
+</section>
+<section id="b24" aria-labelledby="b24-heading">
+<p class="eyebrow">B2.4</p>
+<h2 id="b24-heading">Adding class conditioning</h2>
+<p>The class-conditioned model retains D = 64 and adds two fully connected embeddings of one-hot labels 0–9. At the two conditioning sites, the class embedding scales the feature map and the time embedding is added: h ← c<sub>i</sub> ⊙ h + t<sub>i</sub>.</p>
+<p>Training independently drops each example’s class vector with probability 0.1 by setting it to zero. This null conditioning supports both conditional and unconditional velocity predictions for classifier-free guidance (CFG).</p>
+<p class="equation">v = v<sub>uncond</sub> + 5(v<sub>cond</sub> − v<sub>uncond</sub>).</p>
+</section>
+<section id="b25" aria-labelledby="b25-heading">
+<p class="eyebrow">B2.5</p>
+<h2 id="b25-heading">Training the class-conditioned model</h2>
+<p>Training uses the same noise-to-data interpolation and velocity MSE, ten epochs, batch size 64, Adam with initial learning rate 0.01 and exponential decay γ = 0.1<sup>1/10</sup>. The only new input is the class label with 10% dropout.</p>
+<figure id="b25-loss" data-evidence-id="b25-loss">
+<a href="images/b25-loss.png" aria-label="Open full-size figure: Class-conditioned velocity training loss falls sharply before approaching a plateau.">
+<img src="images/b25-loss.png" width="790" height="290" alt="Class-conditioned velocity training loss falls sharply before approaching a plateau." loading="eager">
+</a>
+<figcaption>Class-conditioned flow-matching loss over ten epochs. <span class="source">Notebook cell 48, output 2.</span>
+</figcaption>
+</figure>
+</section>
+<section id="b26" aria-labelledby="b26-heading">
+<p class="eyebrow">B2.6</p>
+<h2 id="b26-heading">Guided class-conditioned samples</h2>
+<p>Each checkpoint uses 300 Euler steps, CFG scale 5.0 and the same initial-noise seed 185. Columns request digits 0–9, repeated across four rows: four instances of every digit, forty images per checkpoint.</p>
+<figure id="b26-epoch-1" data-evidence-id="b26-epoch-1">
+<a href="images/b26-epoch-1.png" aria-label="Open full-size figure: Four rows of requested digits 0 through 9 from the class-conditioned epoch-1 model.">
+<img src="images/b26-epoch-1.png" width="1029" height="449" alt="Four rows of requested digits 0 through 9 from the class-conditioned epoch-1 model." loading="eager">
+</a>
+<figcaption>Class-conditioned model, epoch 1. Columns 0–9; four samples per digit. <span class="source">Notebook cell 50, output 1.</span>
+</figcaption>
+</figure>
+<figure id="b26-epoch-5" data-evidence-id="b26-epoch-5">
+<a href="images/b26-epoch-5.png" aria-label="Open full-size figure: Four rows of requested digits 0 through 9 from the class-conditioned epoch-5 model.">
+<img src="images/b26-epoch-5.png" width="1029" height="449" alt="Four rows of requested digits 0 through 9 from the class-conditioned epoch-5 model." loading="eager">
+</a>
+<figcaption>Class-conditioned model, epoch 5. Columns 0–9; four samples per digit. <span class="source">Notebook cell 50, output 2.</span>
+</figcaption>
+</figure>
+<figure id="b26-epoch-10" data-evidence-id="b26-epoch-10">
+<a href="images/b26-epoch-10.png" aria-label="Open full-size figure: Four rows of requested digits 0 through 9 from the class-conditioned epoch-10 model.">
+<img src="images/b26-epoch-10.png" width="1029" height="449" alt="Four rows of requested digits 0 through 9 from the class-conditioned epoch-10 model." loading="eager">
+</a>
+<figcaption>Class-conditioned model, epoch 10. Columns 0–9; four samples per digit. <span class="source">Notebook cell 50, output 3.</span>
+</figcaption>
+</figure>
+<p>The requested digit structure is already visible at epoch 1. Later grids show mostly legible, class-consistent outputs with differences in stroke width, loop shape and slant. These are qualitative observations, not a measured classification score.</p>
+</section>
+<section id="b26-nosched" aria-labelledby="b26-nosched-heading">
+<p class="eyebrow">B2.6 · independent comparison</p>
+<h2 id="b26-nosched-heading">Removing the learning-rate scheduler</h2>
+<p>A fresh, independent class-conditioned D = 64 model trained for ten epochs with batch size 64, the same flow objective and 10% class dropout. Adam used a constant learning rate of <strong>0.003</strong>, with no scheduler. This rate is near the baseline’s epoch-6 rate: a compromise between its 0.01 start and approximately 0.001 finish, rather than keeping the initial rate throughout. It was a single-run choice, not an established optimum.</p>
+<figure id="b26-nosched-comparison" data-evidence-id="b26-nosched-comparison">
+<a href="images/b26-nosched-comparison.png" aria-label="Open full-size figure: Matched scheduled and no-scheduler epoch-10 samples, with four instances per digit in each group.">
+<img src="images/b26-nosched-comparison.png" width="1102" height="909" alt="Matched scheduled and no-scheduler epoch-10 samples, with four instances per digit in each group." loading="eager">
+</a>
+<figcaption>Epoch 10: scheduled model in the top four rows; constant-LR model in the bottom four. Matched labels and initial noise, CFG 5.0, 300 Euler steps. <span class="source">Notebook cell 53, output 4.</span>
+</figcaption>
+</figure>
+<figure id="b26-nosched-loss-comparison" data-evidence-id="b26-nosched-loss-comparison">
+<a href="images/b26-nosched-loss-comparison.png" aria-label="Open full-size figure: Scheduled and fixed-rate flow losses both fall rapidly and reach similar plateaus.">
+<img src="images/b26-nosched-loss-comparison.png" width="889" height="290" alt="Scheduled and fixed-rate flow losses both fall rapidly and reach similar plateaus." loading="eager">
+</a>
+<figcaption>Training-loss curves for the two independent ten-epoch runs. <span class="source">Notebook cell 53, output 5.</span>
+</figcaption>
+</figure>
+<table class="results">
+<caption>Final-epoch mean training MSE · 938 batches per epoch</caption>
+<thead>
+<tr>
+<th scope="col">Run</th>
+<th scope="col">MSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Exponential scheduler</th>
+<td data-metric="scheduled_mse">0.08430355769008208</td>
+</tr>
+<tr>
+<th scope="row">Constant LR 0.003</th>
+<td data-metric="constant_mse">0.08607087446364767</td>
+</tr>
+<tr>
+<th scope="row">Relative increase</th>
+<td data-metric="nosched_percent">2.096%</td>
+</tr>
+</tbody>
+</table>
+<p>Both grids contain mostly legible digits agreeing with the requested classes. Some constant-LR strokes are thinner or more angular, particularly among the 2s and 7s. Both runs show within-class variations in slant and loop shape, with no clear diversity advantage. The results support comparable visual quality, not universal superiority of either run.</p>
+<p>A 2.096% difference in training velocity MSE need not imply a large perceptual difference. These are only two runs and forty matched samples per model; no multi-seed uncertainty or quantitative generation-quality metric was measured.</p>
+<details>
+<summary>Additional recorded no-scheduler training and epoch grids</summary>
+<figure id="b26-nosched-loss" data-evidence-id="b26-nosched-loss">
+<a href="images/b26-nosched-loss.png" aria-label="Open full-size figure: No-scheduler training loss with its moving average.">
+<img src="images/b26-nosched-loss.png" width="790" height="290" alt="No-scheduler training loss with its moving average." loading="eager">
+</a>
+<figcaption>Independent constant-LR model: loss over all ten epochs. <span class="source">Notebook cell 51, output 2.</span>
+</figcaption>
+</figure>
+<figure id="b26-nosched-epoch-1" data-evidence-id="b26-nosched-epoch-1">
+<a href="images/b26-nosched-epoch-1.png" aria-label="Open full-size figure: Four samples of each class from the no-scheduler epoch-1 checkpoint.">
+<img src="images/b26-nosched-epoch-1.png" width="1029" height="449" alt="Four samples of each class from the no-scheduler epoch-1 checkpoint." loading="eager">
+</a>
+<figcaption>Independent no-scheduler model, epoch 1; CFG 5.0, 300 Euler steps, seed 185. <span class="source">Notebook cell 53, output 1.</span>
+</figcaption>
+</figure>
+<figure id="b26-nosched-epoch-5" data-evidence-id="b26-nosched-epoch-5">
+<a href="images/b26-nosched-epoch-5.png" aria-label="Open full-size figure: Four samples of each class from the no-scheduler epoch-5 checkpoint.">
+<img src="images/b26-nosched-epoch-5.png" width="1029" height="449" alt="Four samples of each class from the no-scheduler epoch-5 checkpoint." loading="eager">
+</a>
+<figcaption>Independent no-scheduler model, epoch 5; CFG 5.0, 300 Euler steps, seed 185. <span class="source">Notebook cell 53, output 2.</span>
+</figcaption>
+</figure>
+<figure id="b26-nosched-epoch-10" data-evidence-id="b26-nosched-epoch-10">
+<a href="images/b26-nosched-epoch-10.png" aria-label="Open full-size figure: Four samples of each class from the no-scheduler epoch-10 checkpoint.">
+<img src="images/b26-nosched-epoch-10.png" width="1029" height="449" alt="Four samples of each class from the no-scheduler epoch-10 checkpoint." loading="eager">
+</a>
+<figcaption>Independent no-scheduler model, epoch 10; CFG 5.0, 300 Euler steps, seed 185. <span class="source">Notebook cell 53, output 3.</span>
+</figcaption>
+</figure>
+</details>
+</section>
+<section id="b3" aria-labelledby="b3-heading">
+<p class="eyebrow">Required graduate work · B3</p>
+<h2 id="b3-heading">CS 280A Graduate Bells &amp; Whistles: Improved Time-conditioned UNet</h2>
+<p>The original time-only model was continued from epoch 10 through epoch 30, using twenty additional epochs. Its checkpoint and Adam optimizer state were restored. Learning rate began at 0.001 and future decay was slowed to γ = 0.1<sup>1/20</sup>. The D = 64 architecture, flow objective and batch size 64 were retained; no class conditioning was added.</p>
+<p>The comparison holds initial noise seed 184 and fifty Euler steps fixed. The epoch-10 baseline is reused from the original sampling result where available.</p>
+<figure id="b3-comparison" data-evidence-id="b3-comparison">
+<a href="images/b3-comparison.png" aria-label="Open full-size figure: Matched epoch-10 and epoch-30 time-only samples showing modest, uneven changes in digit coherence.">
+<img src="images/b3-comparison.png" width="1102" height="909" alt="Matched epoch-10 and epoch-30 time-only samples showing modest, uneven changes in digit coherence." loading="eager">
+</a>
+<figcaption>Time-only model: epoch 10 in the top four rows; continued epoch 30 in the bottom four. Identical initial noise and Euler settings. <span class="source">Notebook cell 60, output 1.</span>
+</figcaption>
+</figure>
+<table class="results">
+<caption>Final-epoch mean training MSE · original versus continued training</caption>
+<thead>
+<tr>
+<th scope="col">Time-only checkpoint</th>
+<th scope="col">MSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Epoch 10</th>
+<td data-metric="time10_mse">0.09349463440811456</td>
+</tr>
+<tr>
+<th scope="row">Epoch 30</th>
+<td data-metric="time30_mse">0.08819641515231336</td>
+</tr>
+<tr>
+<th scope="row">Relative reduction</th>
+<td data-metric="bw_percent">5.667%</td>
+</tr>
+</tbody>
+</table>
+<p>The visual gains are modest and nonuniform. Within each four-row grid, row 2, column 1 becomes more connected and 4-like; row 3, column 9 becomes a clearer closed loop. Row 3, column 4 remains branched, and row 4, column 8 retains irregular doubled strokes. Many recognizable samples change little; some output identities change despite matched noise.</p>
+<p>The lower training MSE supports improved fitting of the velocity objective, but cannot alone establish better image quality. Diversity appears broadly similar in this fixed grid. No generation-quality metric or repeated-run study was performed.</p>
+<figure id="b3-loss" data-evidence-id="b3-loss">
+<a href="images/b3-loss.png" aria-label="Open full-size figure: Thirty-epoch time-only training loss, with a long low-loss continuation after the first ten epochs.">
+<img src="images/b3-loss.png" width="790" height="290" alt="Thirty-epoch time-only training loss, with a long low-loss continuation after the first ten epochs." loading="eager">
+</a>
+<figcaption>Time-only training history through epoch 30, including the original ten epochs. <span class="source">Notebook cell 57, output 2.</span>
+</figcaption>
+</figure>
+<figure id="b3-epoch-10" data-evidence-id="b3-epoch-10">
+<a href="images/b3-epoch-10.png" aria-label="Open full-size figure: Forty time-only graduate-experiment samples from epoch 10.">
+<img src="images/b3-epoch-10.png" width="1029" height="449" alt="Forty time-only graduate-experiment samples from epoch 10." loading="eager">
+</a>
+<figcaption>Time-only graduate experiment, epoch 10; seed 184 and 50 Euler steps. <span class="source">Notebook cell 58, output 1.</span>
+</figcaption>
+</figure>
+<figure id="b3-epoch-20" data-evidence-id="b3-epoch-20">
+<a href="images/b3-epoch-20.png" aria-label="Open full-size figure: Forty time-only graduate-experiment samples from epoch 20.">
+<img src="images/b3-epoch-20.png" width="1029" height="449" alt="Forty time-only graduate-experiment samples from epoch 20." loading="eager">
+</a>
+<figcaption>Time-only graduate experiment, epoch 20; seed 184 and 50 Euler steps. <span class="source">Notebook cell 58, output 2.</span>
+</figcaption>
+</figure>
+<figure id="b3-epoch-30" data-evidence-id="b3-epoch-30">
+<a href="images/b3-epoch-30.png" aria-label="Open full-size figure: Forty time-only graduate-experiment samples from epoch 30.">
+<img src="images/b3-epoch-30.png" width="1029" height="449" alt="Forty time-only graduate-experiment samples from epoch 30." loading="eager">
+</a>
+<figcaption>Time-only graduate experiment, epoch 30; seed 184 and 50 Euler steps. <span class="source">Notebook cell 58, output 3.</span>
+</figcaption>
+</figure>
+</section>
+<section id="evidence" aria-labelledby="evidence-heading">
+<p class="eyebrow">Evidence &amp; limitations</p>
+<h2 id="evidence-heading">What was verified</h2>
+<p>All 27 displayed PNGs are unmodified notebook output bytes, verified against the cleaned submission notebook and both preserved executed notebook copies. Eight local ZIP archives passed CRC and member-path checks. Their available PNG exports have different rendering dimensions and are recorded as alternative representations, not pixel-identical matches. No separate class-sampling ZIP was found under the inspected backup root.</p>
+<p>The MSE comparisons above were independently recalculated from the saved per-step JSON histories, using 938 batches per epoch, and checked against the recorded comparison summaries. Matching notebook copies establishes evidence preservation, not an independent experimental replication.</p>
+<p>Figures are historical Colab results. The reorganized submission notebook has only structural validation and has not been executed in a fresh runtime. No training, inference, image regeneration or network access was used to create this report. Experimental settings come from the recorded notebook source and saved summaries; model checkpoints were not loaded.</p>
+<p>The report follows the Fall 2026 Part B and submission requirements verified in earlier audits; this offline milestone did not refresh those pages. Original course attribution and provenance remain in the protected notebooks. Current course-policy review remains a separate submission check.</p>
+<p>
+<a href="evidence_manifest.json">Inspect the evidence manifest</a>. Select any figure to open its original exported resolution. This report covers Part B only; Part A integration, final PDF, packaging and publication remain separate steps.</p>
+</section>
+</main>
+</div>
+<footer>
+<p>CS 280A · Project 3 · Part B</p>
+<a href="#main">Back to results ↑</a>
+</footer>
+</body>
+</html>

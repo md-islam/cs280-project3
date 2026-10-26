@@ -1,0 +1,421 @@
+:root {
+  color-scheme:light;
+  --ink:#183247;
+  --muted:#526675;
+  --accent:#9b6b19;
+  --line:#d8e1e6;
+  --paper:#fff;
+  --wash:#f4f6f7;
+}
+* {
+  box-sizing:border-box;
+}
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:1.5rem;
+}
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font:17px/1.7 Georgia,"Times New Roman",serif;
+}
+a {
+  color:#155a88;
+  text-underline-offset:.2em;
+}
+a:hover {
+  text-decoration-thickness:2px;
+}
+a:focus-visible,summary:focus-visible {
+  outline:3px solid var(--accent);
+  outline-offset:5px;
+}
+.skip {
+  position:absolute;
+  left:1rem;
+  top:-5rem;
+  padding:.5rem;
+  background:#fff;
+}
+.skip:focus {
+  top:1rem;
+}
+.report-header {
+  max-width:1380px;
+  margin:auto;
+  padding:5rem 3rem 3rem;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow,.nav-title,.report-note,figcaption,.source,table,summary,footer {
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+.eyebrow {
+  font-size:.75rem;
+  font-weight:650;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 .8rem;
+}
+h1,h2 {
+  font-weight:500;
+  letter-spacing:-.035em;
+  line-height:1.15;
+}
+h1 {
+  font-size:clamp(2.7rem,5.6vw,5.5rem);
+  margin:.6rem 0 1.2rem;
+}
+.dek {
+  font-size:1.3rem;
+  max-width:46rem;
+  margin:0 0 1.4rem;
+}
+.report-note {
+  font-size:.8rem;
+  color:var(--muted);
+  margin:0;
+}
+.layout {
+  display:grid;
+  grid-template-columns:230px minmax(0,1fr);
+  gap:3rem;
+  max-width:1380px;
+  margin:auto;
+  padding:3rem;
+}
+nav {
+  position:sticky;
+  top:2rem;
+  align-self:start;
+  max-height:calc(100vh - 4rem);
+  overflow:auto;
+  font:12px/1.55 system-ui,sans-serif;
+}
+nav .nav-title {
+  font-size:.75rem;
+  font-weight:700;
+  color:var(--muted);
+  margin:0 0 1rem;
+}
+nav a {
+  display:block;
+  padding:.35rem .2rem;
+  text-decoration:none;
+  color:var(--muted);
+}
+nav a:hover {
+  color:var(--ink);
+  text-decoration:underline;
+}
+main {
+  min-width:0;
+}
+.opening {
+  padding:0 0 2rem;
+}
+.opening>p,section>p {
+  max-width:78ch;
+}
+section {
+  border-top:1px solid var(--line);
+  padding:3rem 0 2rem;
+}
+h2 {
+  font-size:clamp(1.8rem,3vw,2.5rem);
+  margin:.5rem 0 1.4rem;
+}
+p {
+  margin:1rem 0 1.35rem;
+}
+figure {
+  margin:2.1rem 0 2.6rem;
+  break-inside:avoid;
+}
+figure a {
+  display:block;
+}
+figure img {
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  background:#fff;
+}
+figcaption {
+  font-size:.82rem;
+  line-height:1.6;
+  color:var(--muted);
+  margin:.75rem 0 0;
+  padding-left:.85rem;
+  border-left:2px solid var(--line);
+}
+.source {
+  display:block;
+  font-size:.7rem;
+  margin-top:.2rem;
+  color:#687d8a;
+}
+.equation {
+  background:var(--wash);
+  padding:1rem 1.2rem;
+  font-size:1.1rem;
+  border-left:3px solid var(--accent);
+  overflow-wrap:anywhere;
+}
+.math {
+  white-space:nowrap;
+}
+table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:.8rem;
+  line-height:1.5;
+  margin:2rem 0;
+  text-align:left;
+  font-variant-numeric:tabular-nums;
+}
+caption {
+  text-align:left;
+  color:var(--muted);
+  font-size:.75rem;
+  padding-bottom:.8rem;
+}
+th,td {
+  padding:.8rem .6rem;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+thead {
+  background:var(--wash);
+}
+tbody th {
+  font-weight:500;
+}
+.results {
+  max-width:42rem;
+  font-size:.9rem;
+}
+details {
+  margin:2rem 0;
+  background:var(--wash);
+  padding:1rem 1.2rem;
+}
+summary {
+  cursor:pointer;
+  font-size:.85rem;
+  font-weight:600;
+}
+details figure {
+  background:#fff;
+  padding:.7rem;
+}
+footer {
+  max-width:1380px;
+  margin:auto;
+  padding:2rem 3rem;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  font-size:.8rem;
+  color:var(--muted);
+}
+footer p {
+  margin:0;
+}
+@media(max-width:1000px) {
+  .layout {
+    grid-template-columns:180px minmax(0,1fr);
+    gap:1.5rem;
+    padding:2rem;
+  }
+  .report-header {
+    padding:3rem 2rem;
+  }
+  nav {
+    font-size:11px;
+  }
+}
+@media(max-width:720px) {
+  .layout {
+    display:block;
+    padding:1.25rem;
+  }
+  nav {
+    position:static;
+    max-height:none;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:.1rem .7rem;
+    padding-bottom:2rem;
+    font-size:12px;
+  }
+  .nav-title {
+    grid-column:1/-1;
+  }
+  .report-header {
+    padding:3rem 1.25rem 2rem;
+  }
+  .dek {
+    font-size:1.1rem;
+  }
+  body {
+    font-size:16px;
+  }
+  section {
+    padding-top:2rem;
+  }
+  h2 {
+    overflow-wrap:break-word;
+  }
+  th,td {
+    padding:.65rem .3rem;
+  }
+  table {
+    font-size:.69rem;
+  }
+  .results {
+    font-size:.8rem;
+  }
+  .results td {
+    overflow-wrap:anywhere;
+  }
+  figure {
+    margin:1.5rem 0 2rem;
+  }
+  footer {
+    padding:1.5rem 1.25rem;
+    gap:1rem;
+  }
+  .equation {
+    font-size:1rem;
+  }
+  details {
+    padding:.8rem;
+  }
+  details figure {
+    padding:0;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto;
+  }
+}
+@page {
+  size:A4;
+  margin:15mm;
+}
+@media print {
+  html {
+    scroll-behavior:auto;
+  }
+  body {
+    background:white;
+    color:black;
+    font-size:10pt;
+    line-height:1.5;
+  }
+  .skip,nav,footer {
+    display:none;
+  }
+  .report-header,.layout {
+    display:block;
+    max-width:none;
+    padding:0;
+    border:0;
+  }
+  .report-header {
+    margin-bottom:10mm;
+  }
+  h1 {
+    font-size:34pt;
+  }
+  h2 {
+    font-size:21pt;
+    break-after:avoid;
+  }
+  section {
+    padding:6mm 0 3mm;
+    break-before:auto;
+  }
+  section>.eyebrow {
+    break-after:avoid;
+  }
+  .eyebrow {
+    color:#333;
+  }
+  .dek {
+    font-size:13pt;
+  }
+  .report-note {
+    font-size:9pt;
+  }
+  .opening {
+    padding-bottom:3mm;
+  }
+  figure {
+    break-inside:avoid;
+    page-break-inside:avoid;
+    margin:5mm 0 7mm;
+  }
+  figure img {
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:225mm;
+    object-fit:contain;
+  }
+  figcaption {
+    break-before:avoid;
+    font-size:8pt;
+    color:#333;
+  }
+  .source {
+    font-size:7pt;
+  }
+  table {
+    font-size:8pt;
+    break-inside:avoid;
+  }
+  thead {
+    display:table-header-group;
+  }
+  th,td {
+    padding:2mm;
+  }
+  .results {
+    font-size:9pt;
+  }
+  details {
+    display:block;
+    background:white;
+    padding:0;
+  }
+  details>summary {
+    display:none;
+  }
+  details>figure {
+    display:block!important;
+    content-visibility:visible;
+    padding:0;
+  }
+  details::details-content {
+    display:block!important;
+    content-visibility:visible!important;
+  }
+  a {
+    color:inherit;
+    text-decoration:none;
+  }
+  .equation {
+    background:white;
+    border-color:#777;
+    padding:3mm;
+    font-size:11pt;
+  }
+  .math {
+    white-space:normal;
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "status": "PREVIEW — NOT FINAL",
+  "publication_authorized": false,
+  "proposed_url": "https://md-islam.github.io/cs280-project3/",
+  "files": {
+    ".nojekyll": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "index.html": {
+      "sha256": "1c609c31164cf8ab6e22938717aa0a4ae02ad3e90b825ed6f7ae49f1a182e2e7",
+      "bytes": 3666
+    },
+    "integration.css": {
+      "sha256": "64ca12b31778cb755b6a9c5042d4b7aa2830bb18f5ed51b227a647b0d80e4c8d",
+      "bytes": 8841
+    },
+    "parta/archive_provenance.json": {
+      "sha256": "7510d0c7616070365ae17d6d815178fadef0bbf40c8213332c36a804075980c6",
+      "bytes": 2593
+    },
+    "parta/evidence_manifest.json": {
+      "sha256": "2d07b78f0d8332326859bd8d6f532d45228807ae1ae607406f4eee2b5f315694",
+      "bytes": 8289
+    },
+    "parta/figure_import.schema.json": {
+      "sha256": "21ab2f2a68f3b6f6ba68945fe05a64e44188d5116f265a410e19088c7b48ea85",
+      "bytes": 7091
+    },
+    "parta/images/course_logo_design.png": {
+      "sha256": "c129863e5614ea3960fc18a43d36e7e706a5b1fc02834a035a70473b12fe5aac",
+      "bytes": 404094
+    },
+    "parta/images/course_logo_process.png": {
+      "sha256": "1359e2803b735523cec29291614da6fab322f58bea1176417e361bc89ed32acb",
+      "bytes": 1265214
+    },
+    "parta/images/great_wave_sdedit.png": {
+      "sha256": "01c891ae4a8aa32d8ad3942d37065b12f1d278fad79e65126f51b7c1f1e3bc78",
+      "bytes": 3261129
+    },
+    "parta/images/rotate90_lighthouse_train.png": {
+      "sha256": "c3f2293cca163d2c662d96ded45e7420783602cdf2a34ba3da498a33de7db2ee",
+      "bytes": 1427368
+    },
+    "partb/evidence_manifest.json": {
+      "sha256": "6a6f2df7929afccd69ca9df0fe28696793016892d366d2ce80079699a96a36f2",
+      "bytes": 62360
+    },
+    "partb/images/b12-noise.png": {
+      "sha256": "6970d86c0ef6add0dccda572c2eb85f7e7657ac7019dfbde79fd5c8683ac5b5e",
+      "bytes": 24323
+    },
+    "partb/images/b121-epoch-1.png": {
+      "sha256": "bdaabc4c1feb872b3e7f73491ad4e7d50e5e8b294c35bf005e0c75871f34d584",
+      "bytes": 45598
+    },
+    "partb/images/b121-epoch-5.png": {
+      "sha256": "0a094826c8ac9ae9fe7a569412b175af9b4d82014572562166a88e6399666dec",
+      "bytes": 40322
+    },
+    "partb/images/b121-loss.png": {
+      "sha256": "e5bdd9f73cb3105c05644d0037b436d16ba6069ea5d04bf07285829a38e27c3e",
+      "bytes": 18546
+    },
+    "partb/images/b122-ood.png": {
+      "sha256": "9cc51930e07c9b127dae0ba59f6d9520fe31aa9d29f237fd6bfbb4af40365389",
+      "bytes": 46991
+    },
+    "partb/images/b123-epoch-1.png": {
+      "sha256": "bb978313eee43c06b0de61299ec17e1e32052fa8d2ff49020e10969819623c7c",
+      "bytes": 43441
+    },
+    "partb/images/b123-epoch-5.png": {
+      "sha256": "898d10abacedb454a8ad60df7b714bde3afa6b8f089e94a26f2f85cd3b7d8147",
+      "bytes": 41412
+    },
+    "partb/images/b123-loss.png": {
+      "sha256": "29918b398804808c9fde20b1c4f2fcb235ae96665e84a63e1772a7f5800dc128",
+      "bytes": 22447
+    },
+    "partb/images/b22-loss.png": {
+      "sha256": "860b4de71e822866c63050618d04195b5ec4578bc4f356af59637c86719af916",
+      "bytes": 17340
+    },
+    "partb/images/b23-epoch-1.png": {
+      "sha256": "f98a4ef605e438f910bf3c2a56549da41b799f7dd9fbe9557964f490ee127f0d",
+      "bytes": 69764
+    },
+    "partb/images/b23-epoch-10.png": {
+      "sha256": "fa2b06812097f5747ee7761a10d60a849ddc64275b279ddd54fa33c1bf294d08",
+      "bytes": 42626
+    },
+    "partb/images/b23-epoch-5.png": {
+      "sha256": "d131ce1e59c05547a583c3c3175b8e512aa206ffdbad54909f988fcf369aee45",
+      "bytes": 40104
+    },
+    "partb/images/b25-loss.png": {
+      "sha256": "8ba2bccdffadb521b378a6da1cafb6713fd8f648fa85999d2d6a027c3c474b12",
+      "bytes": 20815
+    },
+    "partb/images/b26-epoch-1.png": {
+      "sha256": "3e4fd621f9670b136f177b3bfb74f4c57544a3ff5cbd21ddf56288a5d38b6caf",
+      "bytes": 55776
+    },
+    "partb/images/b26-epoch-10.png": {
+      "sha256": "79f51559cc649b38d56863113aa7c89443c990a03e09998afec35459a7be2ff0",
+      "bytes": 42092
+    },
+    "partb/images/b26-epoch-5.png": {
+      "sha256": "ef0246e0bc4ce0e8fa048097dadf21010b05f6cb9511593d0951de0daf2d68e8",
+      "bytes": 49898
+    },
+    "partb/images/b26-nosched-comparison.png": {
+      "sha256": "2ff76dc216c2c39d5435b06a04d8ab6bc0f734c9fa17fb840813315606215e27",
+      "bytes": 84104
+    },
+    "partb/images/b26-nosched-epoch-1.png": {
+      "sha256": "bb8adea4660df76054e98042efb895678d070154498b3997e731a575540cf476",
+      "bytes": 52696
+    },
+    "partb/images/b26-nosched-epoch-10.png": {
+      "sha256": "3c8a81a0c403f49fc8329d6da6e49aed8ecf6a0c81000647e713a0df4292bd98",
+      "bytes": 41859
+    },
+    "partb/images/b26-nosched-epoch-5.png": {
+      "sha256": "2e2cf19dd4439a8a45ed2537be7e8fd0141ce4836967bc7bf6be414b31bef18a",
+      "bytes": 49905
+    },
+    "partb/images/b26-nosched-loss-comparison.png": {
+      "sha256": "34943788e89397dc99a5572445ca02d52cbd86ae781d9c2a5052c6162c581aac",
+      "bytes": 27490
+    },
+    "partb/images/b26-nosched-loss.png": {
+      "sha256": "46bd63b689cef144db03906daebeae803189c4560c2df0389aabe6593af42d20",
+      "bytes": 26631
+    },
+    "partb/images/b3-comparison.png": {
+      "sha256": "084ad48428fc3b457e8849d4c2968daf7056fac42b16976dde9bd633800316e0",
+      "bytes": 82009
+    },
+    "partb/images/b3-epoch-10.png": {
+      "sha256": "63bcbad2cd4c44de7acaacdcd62f1d7a4090d1f079275c3486dade32bbf8fa36",
+      "bytes": 41716
+    },
+    "partb/images/b3-epoch-20.png": {
+      "sha256": "42916e00942e0ddf9b7481ea5db90c0136f25b0c1b75a6671205414af4d5c099",
+      "bytes": 36695
+    },
+    "partb/images/b3-epoch-30.png": {
+      "sha256": "9689c2adf252c9d190fabf50651970a26914e3a44cf2b52e6b6a733610548031",
+      "bytes": 37584
+    },
+    "partb/images/b3-loss.png": {
+      "sha256": "616826545a1db0ae1d91429ad3d1190d4b3565bab6448e35e8bdc9ee10c779f0",
+      "bytes": 17356
+    },
+    "partb/index.html": {
+      "sha256": "8ef3bf149c1c9d1c7877936cc31ee114fc6f43fafa44ce6bf1f763ed248352fc",
+      "bytes": 30093
+    },
+    "partb/styles.css": {
+      "sha256": "9310bcbc1b51a0d3f8e7316ae556afe0c30b1c44a928d611ed4d900a92d4f08e",
+      "bytes": 6573
+    },
+    "report.html": {
+      "sha256": "e5685fe9f05ccf65c52cecdf40a67cef84f8972f905cb96b7b466e248c36ad12",
+      "bytes": 40961
+    }
+  }
+}

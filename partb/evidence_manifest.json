@@ -1,0 +1,1846 @@
+{
+  "schema_version": 1,
+  "scope": "Part B only; offline report",
+  "indexing": "Notebook cells and outputs are one-based.",
+  "sources": [
+    {
+      "id": "submission-notebook",
+      "type": "notebook",
+      "sha256": "a5adcd6ee9318b218b9f61d3054467a013ce8d171af070506df0cdd0af6602d1",
+      "size_bytes": 1669930,
+      "cells": 71,
+      "figures": 27
+    },
+    {
+      "id": "executed-notebook",
+      "type": "notebook",
+      "sha256": "0cef9c510e63a4acec0a89088c9beee312bda89bad78fa416cb622b3f9f67a0e",
+      "size_bytes": 1691624,
+      "cells": 75,
+      "figures": 27
+    },
+    {
+      "id": "executed-backup",
+      "type": "notebook",
+      "sha256": "0cef9c510e63a4acec0a89088c9beee312bda89bad78fa416cb622b3f9f67a0e",
+      "size_bytes": 1691624,
+      "cells": 75,
+      "figures": 27
+    },
+    {
+      "id": "partb_b22_backup.zip",
+      "type": "zip",
+      "sha256": "2d93995f68a78957b1541dfb5c8fd3d72c3d8374c61864c249f91c98be121302",
+      "size_bytes": 241510192,
+      "crc_status": "PASS",
+      "path_safety_status": "PASS",
+      "members": [
+        "time_fm_epoch_1.pt",
+        "time_fm_epoch_2.pt",
+        "time_fm_epoch_3.pt",
+        "time_fm_epoch_4.pt",
+        "time_fm_epoch_5.pt",
+        "time_fm_epoch_6.pt",
+        "time_fm_epoch_7.pt",
+        "time_fm_epoch_8.pt",
+        "time_fm_epoch_9.pt",
+        "time_fm_epoch_10.pt",
+        "time_fm_history.json",
+        "time_fm_loss.png"
+      ]
+    },
+    {
+      "id": "partb_milestone1_results.zip",
+      "type": "zip",
+      "sha256": "79347ee9137ec519185268da8e1adeef29cd16ec281814e821c58a04ed60c050",
+      "size_bytes": 436483564,
+      "crc_status": "PASS",
+      "path_safety_status": "PASS",
+      "members": [
+        "all/",
+        "all/denoiser_loss.png",
+        "all/denoiser_epoch_5.pt",
+        "all/noise_levels.pt",
+        "all/denoiser_samples_epoch_1.pt",
+        "all/denoiser_epoch_1.pt",
+        "all/loss_history.json",
+        "all/denoiser_epoch_5.png",
+        "all/denoiser_epoch_3.pt",
+        "all/noise_levels.png",
+        "all/denoiser_epoch_4.pt",
+        "all/denoiser_epoch_1.png",
+        "all/denoiser_samples_epoch_5.pt",
+        "all/denoiser_epoch_2.pt"
+      ]
+    },
+    {
+      "id": "partb_b25_backup.zip",
+      "type": "zip",
+      "sha256": "9b93b27cd56de01b4ddcb3c9fbc851c80e3e27cd2e6de0e146d4f50b711064ba",
+      "size_bytes": 244351803,
+      "crc_status": "PASS",
+      "path_safety_status": "PASS",
+      "members": [
+        "class_fm_epoch_1.pt",
+        "class_fm_epoch_2.pt",
+        "class_fm_epoch_3.pt",
+        "class_fm_epoch_4.pt",
+        "class_fm_epoch_5.pt",
+        "class_fm_epoch_6.pt",
+        "class_fm_epoch_7.pt",
+        "class_fm_epoch_8.pt",
+        "class_fm_epoch_9.pt",
+        "class_fm_epoch_10.pt",
+        "class_fm_history.json",
+        "class_fm_loss.png"
+      ]
+    },
+    {
+      "id": "partb_nosched_comparison_backup.zip",
+      "type": "zip",
+      "sha256": "7710278f36dc80d027f35d57bcdda735d3994aad680bc184502c9a5ed772ca6c",
+      "size_bytes": 113955012,
+      "crc_status": "PASS",
+      "path_safety_status": "PASS",
+      "members": [
+        "class_nosched_samples_epoch_1.png",
+        "class_nosched_samples_epoch_1.pt",
+        "class_nosched_samples_epoch_5.png",
+        "class_nosched_samples_epoch_5.pt",
+        "class_nosched_samples_epoch_10.png",
+        "class_nosched_samples_epoch_10.pt",
+        "class_nosched_comparison.png",
+        "class_nosched_loss_comparison.png",
+        "class_nosched_comparison.json"
+      ]
+    },
+    {
+      "id": "partb_nosched_training_backup.zip",
+      "type": "zip",
+      "sha256": "fe2c1e19fe3ca835fc9d2112e61fd0b5e3be88cb1386a5ddb13e885c87a4f34c",
+      "size_bytes": 244376381,
+      "crc_status": "PASS",
+      "path_safety_status": "PASS",
+      "members": [
+        "class_nosched_epoch_1.pt",
+        "class_nosched_epoch_2.pt",
+        "class_nosched_epoch_3.pt",
+        "class_nosched_epoch_4.pt",
+        "class_nosched_epoch_5.pt",
+        "class_nosched_epoch_6.pt",
+        "class_nosched_epoch_7.pt",
+        "class_nosched_epoch_8.pt",
+        "class_nosched_epoch_9.pt",
+        "class_nosched_epoch_10.pt",
+        "class_nosched_history.json",
+        "class_nosched_loss.png"
+      ]
+    },
+    {
+      "id": "partb_pure_noise_backup.zip",
+      "type": "zip",
+      "sha256": "96a7cf4e97964f93e0159c83c0cd3c4354ae7ee713af1f25a99b18eb510ce970",
+      "size_bytes": 435878046,
+      "crc_status": "PASS",
+      "path_safety_status": "PASS",
+      "members": [
+        "all/",
+        "all/pure_noise_loss.png",
+        "all/denoiser_ood.pt",
+        "all/pure_noise_epoch_5.pt",
+        "all/pure_noise_epoch_1.pt",
+        "all/pure_noise_samples_epoch_1.pt",
+        "all/pure_noise_samples_epoch_5.pt",
+        "all/denoiser_ood.png",
+        "all/pure_noise_epoch_3.pt",
+        "all/pure_noise_epoch_2.pt",
+        "all/pure_noise_history.json",
+        "all/pure_noise_epoch_1.png",
+        "all/pure_noise_epoch_4.pt",
+        "all/pure_noise_epoch_5.png"
+      ]
+    },
+    {
+      "id": "partb_time_bw_results_backup.zip",
+      "type": "zip",
+      "sha256": "3e9418e0d0e021f15e45b2534d8c164bae0a63e7e7fb967c4d902eb99d772583",
+      "size_bytes": 601207,
+      "crc_status": "PASS",
+      "path_safety_status": "PASS",
+      "members": [
+        "time_bw_samples_epoch_10.png",
+        "time_bw_samples_epoch_10.pt",
+        "time_bw_samples_epoch_20.png",
+        "time_bw_samples_epoch_20.pt",
+        "time_bw_samples_epoch_30.png",
+        "time_bw_samples_epoch_30.pt",
+        "time_bw_comparison.png",
+        "time_bw_comparison.json"
+      ]
+    },
+    {
+      "id": "partb_time_bw_training_backup.zip",
+      "type": "zip",
+      "sha256": "2ba7118115db1a8be3d69d2463d92fead7756f3c6c8d18413f5c35a0a25ede18",
+      "size_bytes": 485735888,
+      "crc_status": "PASS",
+      "path_safety_status": "PASS",
+      "members": [
+        "time_bw_epoch_11.pt",
+        "time_bw_epoch_12.pt",
+        "time_bw_epoch_13.pt",
+        "time_bw_epoch_14.pt",
+        "time_bw_epoch_15.pt",
+        "time_bw_epoch_16.pt",
+        "time_bw_epoch_17.pt",
+        "time_bw_epoch_18.pt",
+        "time_bw_epoch_19.pt",
+        "time_bw_epoch_20.pt",
+        "time_bw_epoch_21.pt",
+        "time_bw_epoch_22.pt",
+        "time_bw_epoch_23.pt",
+        "time_bw_epoch_24.pt",
+        "time_bw_epoch_25.pt",
+        "time_bw_epoch_26.pt",
+        "time_bw_epoch_27.pt",
+        "time_bw_epoch_28.pt",
+        "time_bw_epoch_29.pt",
+        "time_bw_epoch_30.pt",
+        "time_bw_history.json",
+        "time_bw_loss.png"
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "id": "b12-noise",
+      "assignment_section": "B1.2",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 15,
+      "original_output": 1,
+      "submission_cell": 17,
+      "submission_output": 1,
+      "submission_cell_id": "submission-source-14",
+      "source_image_sha256": "6970d86c0ef6add0dccda572c2eb85f7e7657ac7019dfbde79fd5c8683ac5b5e",
+      "image_path": "images/b12-noise.png",
+      "web_image_sha256": "6970d86c0ef6add0dccda572c2eb85f7e7657ac7019dfbde79fd5c8683ac5b5e",
+      "dimensions": [
+        1389,
+        225
+      ],
+      "rgba_sha256": "5cc806a93b6ac3d2436185543f9d98cdc37a4baa149cd81c056f121b7df0fbe9",
+      "experiment_type": "noising",
+      "settings": {
+        "noise_levels": [
+          0,
+          0.2,
+          0.4,
+          0.5,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "test_index": 0,
+        "conditioning": "unconditional"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_milestone1_results.zip",
+            "member": "all/noise_levels.png",
+            "image_sha256": "d3cb78ea4ce721021a00b2bbe1dba08a782c6a8cbeab8c01e8cfe6a6950623d5",
+            "dimensions": [
+              2100,
+              375
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b121-epoch-1",
+      "assignment_section": "B1.2.1",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 21,
+      "original_output": 2,
+      "submission_cell": 23,
+      "submission_output": 2,
+      "submission_cell_id": "submission-source-20",
+      "source_image_sha256": "bdaabc4c1feb872b3e7f73491ad4e7d50e5e8b294c35bf005e0c75871f34d584",
+      "image_path": "images/b121-epoch-1.png",
+      "web_image_sha256": "bdaabc4c1feb872b3e7f73491ad4e7d50e5e8b294c35bf005e0c75871f34d584",
+      "dimensions": [
+        980,
+        334
+      ],
+      "rgba_sha256": "2ca0831f323a25053eb016d8a90e0af4af1f1794372a27cfe5cd7ea0aa26b4cb",
+      "experiment_type": "denoising",
+      "settings": {
+        "epoch": 1,
+        "sigma": 0.5,
+        "hidden_dim": 128,
+        "conditioning": "unconditional"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_milestone1_results.zip",
+            "member": "all/denoiser_epoch_1.png",
+            "image_sha256": "2e89d4d229daa91e66f5838b1d265577d9215fd47032aa8e23f457997b1f6514",
+            "dimensions": [
+              1440,
+              413
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b121-epoch-5",
+      "assignment_section": "B1.2.1",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 21,
+      "original_output": 7,
+      "submission_cell": 23,
+      "submission_output": 7,
+      "submission_cell_id": "submission-source-20",
+      "source_image_sha256": "0a094826c8ac9ae9fe7a569412b175af9b4d82014572562166a88e6399666dec",
+      "image_path": "images/b121-epoch-5.png",
+      "web_image_sha256": "0a094826c8ac9ae9fe7a569412b175af9b4d82014572562166a88e6399666dec",
+      "dimensions": [
+        980,
+        334
+      ],
+      "rgba_sha256": "102f1013cfabd5d82fae5b60d052413e13a1e32a76cf9e9f79f048493cb727ec",
+      "experiment_type": "denoising",
+      "settings": {
+        "epoch": 5,
+        "sigma": 0.5,
+        "hidden_dim": 128,
+        "conditioning": "unconditional"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_milestone1_results.zip",
+            "member": "all/denoiser_epoch_5.png",
+            "image_sha256": "cc7d54ff20f4969212fe29148f5e81e0cbd7bce110e9c39249d210602b8c6cc4",
+            "dimensions": [
+              1440,
+              413
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b121-loss",
+      "assignment_section": "B1.2.1",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 22,
+      "original_output": 1,
+      "submission_cell": 24,
+      "submission_output": 1,
+      "submission_cell_id": "submission-source-21",
+      "source_image_sha256": "e5bdd9f73cb3105c05644d0037b436d16ba6069ea5d04bf07285829a38e27c3e",
+      "image_path": "images/b121-loss.png",
+      "web_image_sha256": "e5bdd9f73cb3105c05644d0037b436d16ba6069ea5d04bf07285829a38e27c3e",
+      "dimensions": [
+        779,
+        290
+      ],
+      "rgba_sha256": "14f5970649ab80d833fd94d0e5e701376655f5621924dbaadae4855475a60312",
+      "experiment_type": "training_loss",
+      "settings": {
+        "epochs": 5,
+        "batch_size": 256,
+        "lr": 0.0001,
+        "conditioning": "unconditional"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_milestone1_results.zip",
+            "member": "all/denoiser_loss.png",
+            "image_sha256": "0288097bd2f9fa2377b9630971181d04fd185d9696cbdb8c3c7ccf13e4770c0f",
+            "dimensions": [
+              960,
+              360
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b122-ood",
+      "assignment_section": "B1.2.2",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 27,
+      "original_output": 1,
+      "submission_cell": 27,
+      "submission_output": 1,
+      "submission_cell_id": "submission-source-26",
+      "source_image_sha256": "9cc51930e07c9b127dae0ba59f6d9520fe31aa9d29f237fd6bfbb4af40365389",
+      "image_path": "images/b122-ood.png",
+      "web_image_sha256": "9cc51930e07c9b127dae0ba59f6d9520fe31aa9d29f237fd6bfbb4af40365389",
+      "dimensions": [
+        1374,
+        593
+      ],
+      "rgba_sha256": "6a7aebc1944a9887e728ee470d90cb61a7f7f157471d518a24a97b2978f2fd02",
+      "experiment_type": "ood_denoising",
+      "settings": {
+        "epoch": 5,
+        "training_sigma": 0.5,
+        "noise_levels": [
+          0,
+          0.2,
+          0.4,
+          0.5,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "test_index": 0,
+        "conditioning": "unconditional"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_pure_noise_backup.zip",
+            "member": "all/denoiser_ood.png",
+            "image_sha256": "0d3efea51c6397ea02a1da461d1803843d53520264e90550ab74473677f658d3",
+            "dimensions": [
+              2100,
+              900
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b123-epoch-1",
+      "assignment_section": "B1.2.3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 30,
+      "original_output": 1,
+      "submission_cell": 29,
+      "submission_output": 1,
+      "submission_cell_id": "submission-source-29",
+      "source_image_sha256": "bb978313eee43c06b0de61299ec17e1e32052fa8d2ff49020e10969819623c7c",
+      "image_path": "images/b123-epoch-1.png",
+      "web_image_sha256": "bb978313eee43c06b0de61299ec17e1e32052fa8d2ff49020e10969819623c7c",
+      "dimensions": [
+        980,
+        334
+      ],
+      "rgba_sha256": "895c383f5c88855ad84fa49e4fdb2cc70251cf2b8bbc380c792c3198fbeb49c9",
+      "experiment_type": "independent_noise",
+      "settings": {
+        "epoch": 1,
+        "hidden_dim": 128,
+        "conditioning": "unconditional"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_pure_noise_backup.zip",
+            "member": "all/pure_noise_epoch_1.png",
+            "image_sha256": "8b3406f45816f9b6a8bf9465c6d9764b5462e39adc3eb632ad43001c6d20f246",
+            "dimensions": [
+              1440,
+              413
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b123-epoch-5",
+      "assignment_section": "B1.2.3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 30,
+      "original_output": 3,
+      "submission_cell": 29,
+      "submission_output": 3,
+      "submission_cell_id": "submission-source-29",
+      "source_image_sha256": "898d10abacedb454a8ad60df7b714bde3afa6b8f089e94a26f2f85cd3b7d8147",
+      "image_path": "images/b123-epoch-5.png",
+      "web_image_sha256": "898d10abacedb454a8ad60df7b714bde3afa6b8f089e94a26f2f85cd3b7d8147",
+      "dimensions": [
+        980,
+        334
+      ],
+      "rgba_sha256": "b2b9d002a969075d0f8ca199344fe0a3c956660b3c7166af24167c182c4f364d",
+      "experiment_type": "independent_noise",
+      "settings": {
+        "epoch": 5,
+        "hidden_dim": 128,
+        "conditioning": "unconditional"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_pure_noise_backup.zip",
+            "member": "all/pure_noise_epoch_5.png",
+            "image_sha256": "4e051654433f26e68161cc0f8cc42863de5a48b0e9c95ceb34b549f78993748d",
+            "dimensions": [
+              1440,
+              413
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b123-loss",
+      "assignment_section": "B1.2.3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 30,
+      "original_output": 5,
+      "submission_cell": 29,
+      "submission_output": 5,
+      "submission_cell_id": "submission-source-29",
+      "source_image_sha256": "29918b398804808c9fde20b1c4f2fcb235ae96665e84a63e1772a7f5800dc128",
+      "image_path": "images/b123-loss.png",
+      "web_image_sha256": "29918b398804808c9fde20b1c4f2fcb235ae96665e84a63e1772a7f5800dc128",
+      "dimensions": [
+        788,
+        290
+      ],
+      "rgba_sha256": "3ed02e25be60179cd39deb65fb4648ee074f7e029bb507fc99f660ccc1c8db33",
+      "experiment_type": "training_loss",
+      "settings": {
+        "epochs": 5,
+        "batch_size": 256,
+        "lr": 0.0001,
+        "conditioning": "unconditional"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_pure_noise_backup.zip",
+            "member": "all/pure_noise_loss.png",
+            "image_sha256": "3b0d3514a8bc0e8a553644a1d7948820387d45efc36f89e6a3050efef638aefe",
+            "dimensions": [
+              960,
+              360
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b22-loss",
+      "assignment_section": "B2.2",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 42,
+      "original_output": 2,
+      "submission_cell": 39,
+      "submission_output": 2,
+      "submission_cell_id": "submission-source-41",
+      "source_image_sha256": "860b4de71e822866c63050618d04195b5ec4578bc4f356af59637c86719af916",
+      "image_path": "images/b22-loss.png",
+      "web_image_sha256": "860b4de71e822866c63050618d04195b5ec4578bc4f356af59637c86719af916",
+      "dimensions": [
+        790,
+        290
+      ],
+      "rgba_sha256": "b8fa1ae9d31a41fbfd01a5d375a3e247ae0229dae1a807c1334705aea145f2b5",
+      "experiment_type": "training_loss",
+      "settings": {
+        "epochs": 10,
+        "hidden_dim": 64,
+        "batch_size": 64,
+        "initial_lr": 0.01,
+        "scheduler_gamma": 0.7943282347242815,
+        "conditioning": "time_only"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_b22_backup.zip",
+            "member": "time_fm_loss.png",
+            "image_sha256": "4104642d629d9b8e646ce48174ddbba2aa4b7756409a2c29bd009560b42a8e32",
+            "dimensions": [
+              960,
+              360
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b23-epoch-1",
+      "assignment_section": "B2.3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 46,
+      "original_output": 1,
+      "submission_cell": 41,
+      "submission_output": 1,
+      "submission_cell_id": "submission-source-45",
+      "source_image_sha256": "f98a4ef605e438f910bf3c2a56549da41b799f7dd9fbe9557964f490ee127f0d",
+      "image_path": "images/b23-epoch-1.png",
+      "web_image_sha256": "f98a4ef605e438f910bf3c2a56549da41b799f7dd9fbe9557964f490ee127f0d",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "ef3b90aa688e6f1b596370c53fd3ca607c5b666a4dbd9e72c7d0105964844fff",
+      "experiment_type": "time_sampling",
+      "settings": {
+        "epoch": 1,
+        "conditioning": "time_only",
+        "euler_steps": 50,
+        "initial_noise_seed": 184
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [],
+        "archive_status": "no corresponding PNG found in inspected archives"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b23-epoch-5",
+      "assignment_section": "B2.3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 46,
+      "original_output": 2,
+      "submission_cell": 41,
+      "submission_output": 2,
+      "submission_cell_id": "submission-source-45",
+      "source_image_sha256": "d131ce1e59c05547a583c3c3175b8e512aa206ffdbad54909f988fcf369aee45",
+      "image_path": "images/b23-epoch-5.png",
+      "web_image_sha256": "d131ce1e59c05547a583c3c3175b8e512aa206ffdbad54909f988fcf369aee45",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "44a7db96ca1c543e7dae0e57bc70fa419685d732f6d7b6b27841710a774455ff",
+      "experiment_type": "time_sampling",
+      "settings": {
+        "epoch": 5,
+        "conditioning": "time_only",
+        "euler_steps": 50,
+        "initial_noise_seed": 184
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [],
+        "archive_status": "no corresponding PNG found in inspected archives"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b23-epoch-10",
+      "assignment_section": "B2.3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 46,
+      "original_output": 3,
+      "submission_cell": 41,
+      "submission_output": 3,
+      "submission_cell_id": "submission-source-45",
+      "source_image_sha256": "fa2b06812097f5747ee7761a10d60a849ddc64275b279ddd54fa33c1bf294d08",
+      "image_path": "images/b23-epoch-10.png",
+      "web_image_sha256": "fa2b06812097f5747ee7761a10d60a849ddc64275b279ddd54fa33c1bf294d08",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "54d64c8e3eb95997b0de65f01b2bc18ff2c3868ea9437bf46ec6425922cc068d",
+      "experiment_type": "time_sampling",
+      "settings": {
+        "epoch": 10,
+        "conditioning": "time_only",
+        "euler_steps": 50,
+        "initial_noise_seed": 184
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [],
+        "archive_status": "no corresponding PNG found in inspected archives"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b25-loss",
+      "assignment_section": "B2.5",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 56,
+      "original_output": 2,
+      "submission_cell": 48,
+      "submission_output": 2,
+      "submission_cell_id": "submission-source-55",
+      "source_image_sha256": "8ba2bccdffadb521b378a6da1cafb6713fd8f648fa85999d2d6a027c3c474b12",
+      "image_path": "images/b25-loss.png",
+      "web_image_sha256": "8ba2bccdffadb521b378a6da1cafb6713fd8f648fa85999d2d6a027c3c474b12",
+      "dimensions": [
+        790,
+        290
+      ],
+      "rgba_sha256": "7854e25ce4a604489e66c587cc354af2eb59f73bb60d2912f5c06999591877f6",
+      "experiment_type": "training_loss",
+      "settings": {
+        "epochs": 10,
+        "hidden_dim": 64,
+        "batch_size": 64,
+        "initial_lr": 0.01,
+        "class_dropout": 0.1,
+        "conditioning": "time_and_class"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_b25_backup.zip",
+            "member": "class_fm_loss.png",
+            "image_sha256": "ce7ee8bcbc3e256b7e57f85bd53099cae2d5e5a0a3b1d4178e22889c21b98d00",
+            "dimensions": [
+              960,
+              360
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b26-epoch-1",
+      "assignment_section": "B2.6",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 60,
+      "original_output": 1,
+      "submission_cell": 50,
+      "submission_output": 1,
+      "submission_cell_id": "submission-source-59",
+      "source_image_sha256": "3e4fd621f9670b136f177b3bfb74f4c57544a3ff5cbd21ddf56288a5d38b6caf",
+      "image_path": "images/b26-epoch-1.png",
+      "web_image_sha256": "3e4fd621f9670b136f177b3bfb74f4c57544a3ff5cbd21ddf56288a5d38b6caf",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "05f69d3cf8f9126c7fabee79e410456d8dff3e3ab3429c9e9eac5765e531a700",
+      "experiment_type": "class_sampling",
+      "settings": {
+        "epoch": 1,
+        "conditioning": "time_and_class",
+        "euler_steps": 300,
+        "guidance_scale": 5.0,
+        "initial_noise_seed": 185,
+        "class_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [],
+        "archive_status": "no corresponding PNG found in inspected archives"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b26-epoch-5",
+      "assignment_section": "B2.6",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 60,
+      "original_output": 2,
+      "submission_cell": 50,
+      "submission_output": 2,
+      "submission_cell_id": "submission-source-59",
+      "source_image_sha256": "ef0246e0bc4ce0e8fa048097dadf21010b05f6cb9511593d0951de0daf2d68e8",
+      "image_path": "images/b26-epoch-5.png",
+      "web_image_sha256": "ef0246e0bc4ce0e8fa048097dadf21010b05f6cb9511593d0951de0daf2d68e8",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "55d0285a7931203819c14dd6d9fc387943145ccfc872a700e3c6c03858f4dafc",
+      "experiment_type": "class_sampling",
+      "settings": {
+        "epoch": 5,
+        "conditioning": "time_and_class",
+        "euler_steps": 300,
+        "guidance_scale": 5.0,
+        "initial_noise_seed": 185,
+        "class_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [],
+        "archive_status": "no corresponding PNG found in inspected archives"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b26-epoch-10",
+      "assignment_section": "B2.6",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 60,
+      "original_output": 3,
+      "submission_cell": 50,
+      "submission_output": 3,
+      "submission_cell_id": "submission-source-59",
+      "source_image_sha256": "79f51559cc649b38d56863113aa7c89443c990a03e09998afec35459a7be2ff0",
+      "image_path": "images/b26-epoch-10.png",
+      "web_image_sha256": "79f51559cc649b38d56863113aa7c89443c990a03e09998afec35459a7be2ff0",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "8b5ee0da731023f967424abbbc8312b18c7bae47b47d89538fe128131df93958",
+      "experiment_type": "class_sampling",
+      "settings": {
+        "epoch": 10,
+        "conditioning": "time_and_class",
+        "euler_steps": 300,
+        "guidance_scale": 5.0,
+        "initial_noise_seed": 185,
+        "class_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [],
+        "archive_status": "no corresponding PNG found in inspected archives"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b26-nosched-loss",
+      "assignment_section": "B2.6-no-scheduler",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 64,
+      "original_output": 2,
+      "submission_cell": 51,
+      "submission_output": 2,
+      "submission_cell_id": "submission-source-63",
+      "source_image_sha256": "46bd63b689cef144db03906daebeae803189c4560c2df0389aabe6593af42d20",
+      "image_path": "images/b26-nosched-loss.png",
+      "web_image_sha256": "46bd63b689cef144db03906daebeae803189c4560c2df0389aabe6593af42d20",
+      "dimensions": [
+        790,
+        290
+      ],
+      "rgba_sha256": "3f6e7b605dede54cfdeb7a6e5a53066891067db4f06dd35d037990ae4224534f",
+      "experiment_type": "training_loss",
+      "settings": {
+        "epochs": 10,
+        "hidden_dim": 64,
+        "batch_size": 64,
+        "constant_lr": 0.003,
+        "scheduler": null,
+        "class_dropout": 0.1,
+        "conditioning": "time_and_class"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_nosched_training_backup.zip",
+            "member": "class_nosched_loss.png",
+            "image_sha256": "69719ae97c88b1851e4f0e2538e2d7b9cda5d6274d787c82c4a8d8e87369aeb5",
+            "dimensions": [
+              960,
+              360
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b26-nosched-epoch-1",
+      "assignment_section": "B2.6-no-scheduler",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 66,
+      "original_output": 1,
+      "submission_cell": 53,
+      "submission_output": 1,
+      "submission_cell_id": "submission-source-65",
+      "source_image_sha256": "bb8adea4660df76054e98042efb895678d070154498b3997e731a575540cf476",
+      "image_path": "images/b26-nosched-epoch-1.png",
+      "web_image_sha256": "bb8adea4660df76054e98042efb895678d070154498b3997e731a575540cf476",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "1c6a89d3a38935efa83a4447e9fad05f57d28b2c6f2c5a87e629a8694ff28fa6",
+      "experiment_type": "class_sampling",
+      "settings": {
+        "epoch": 1,
+        "euler_steps": 300,
+        "guidance_scale": 5.0,
+        "initial_noise_seed": 185,
+        "class_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "conditioning": "time_and_class"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_nosched_comparison_backup.zip",
+            "member": "class_nosched_samples_epoch_1.png",
+            "image_sha256": "2ff67ec0cad1a67ea113bb45d8654f7df0d54e434153653fcdafbf856a2d2bf8",
+            "dimensions": [
+              1440,
+              552
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b26-nosched-epoch-5",
+      "assignment_section": "B2.6-no-scheduler",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 66,
+      "original_output": 2,
+      "submission_cell": 53,
+      "submission_output": 2,
+      "submission_cell_id": "submission-source-65",
+      "source_image_sha256": "2e2cf19dd4439a8a45ed2537be7e8fd0141ce4836967bc7bf6be414b31bef18a",
+      "image_path": "images/b26-nosched-epoch-5.png",
+      "web_image_sha256": "2e2cf19dd4439a8a45ed2537be7e8fd0141ce4836967bc7bf6be414b31bef18a",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "d24c679d9553cfeaa0c12ac40602933c996614306536f5541cd617b4604f0e60",
+      "experiment_type": "class_sampling",
+      "settings": {
+        "epoch": 5,
+        "euler_steps": 300,
+        "guidance_scale": 5.0,
+        "initial_noise_seed": 185,
+        "class_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "conditioning": "time_and_class"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_nosched_comparison_backup.zip",
+            "member": "class_nosched_samples_epoch_5.png",
+            "image_sha256": "8caf33f51e51bae4379ba650442ff0dbb2924d4b97898aedc6db5006a8fcd75c",
+            "dimensions": [
+              1440,
+              552
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b26-nosched-epoch-10",
+      "assignment_section": "B2.6-no-scheduler",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 66,
+      "original_output": 3,
+      "submission_cell": 53,
+      "submission_output": 3,
+      "submission_cell_id": "submission-source-65",
+      "source_image_sha256": "3c8a81a0c403f49fc8329d6da6e49aed8ecf6a0c81000647e713a0df4292bd98",
+      "image_path": "images/b26-nosched-epoch-10.png",
+      "web_image_sha256": "3c8a81a0c403f49fc8329d6da6e49aed8ecf6a0c81000647e713a0df4292bd98",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "3aaa76959defcee763e4076f106064d4df0bb04ae433ad44c53691fb0a135c07",
+      "experiment_type": "class_sampling",
+      "settings": {
+        "epoch": 10,
+        "euler_steps": 300,
+        "guidance_scale": 5.0,
+        "initial_noise_seed": 185,
+        "class_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "conditioning": "time_and_class"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_nosched_comparison_backup.zip",
+            "member": "class_nosched_samples_epoch_10.png",
+            "image_sha256": "7aff9f12279f665c3e1bc1e9bc9a3902f44bb9896b6948c0f6b923b401035027",
+            "dimensions": [
+              1440,
+              552
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b26-nosched-comparison",
+      "assignment_section": "B2.6-no-scheduler",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 66,
+      "original_output": 4,
+      "submission_cell": 53,
+      "submission_output": 4,
+      "submission_cell_id": "submission-source-65",
+      "source_image_sha256": "2ff76dc216c2c39d5435b06a04d8ab6bc0f734c9fa17fb840813315606215e27",
+      "image_path": "images/b26-nosched-comparison.png",
+      "web_image_sha256": "2ff76dc216c2c39d5435b06a04d8ab6bc0f734c9fa17fb840813315606215e27",
+      "dimensions": [
+        1102,
+        909
+      ],
+      "rgba_sha256": "23943d80390e09551e19f5c667f50c57a3bdb34eadc8227c880df4312a7ac521",
+      "experiment_type": "matched_class_comparison",
+      "settings": {
+        "epoch": 10,
+        "top": "scheduled",
+        "bottom": "constant_lr",
+        "euler_steps": 300,
+        "guidance_scale": 5.0,
+        "initial_noise_seed": 185,
+        "conditioning": "time_and_class"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_nosched_comparison_backup.zip",
+            "member": "class_nosched_comparison.png",
+            "image_sha256": "4be1f1992e248938ffbaf72ccdb4eb236902c2571f5bdbfc4f8bebe475370c9b",
+            "dimensions": [
+              1440,
+              1104
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b26-nosched-loss-comparison",
+      "assignment_section": "B2.6-no-scheduler",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 66,
+      "original_output": 5,
+      "submission_cell": 53,
+      "submission_output": 5,
+      "submission_cell_id": "submission-source-65",
+      "source_image_sha256": "34943788e89397dc99a5572445ca02d52cbd86ae781d9c2a5052c6162c581aac",
+      "image_path": "images/b26-nosched-loss-comparison.png",
+      "web_image_sha256": "34943788e89397dc99a5572445ca02d52cbd86ae781d9c2a5052c6162c581aac",
+      "dimensions": [
+        889,
+        290
+      ],
+      "rgba_sha256": "2a92d8b533cb4ac3f6d0021245c1168418b142f6d81cc20a670925f6dd669fe1",
+      "experiment_type": "training_loss_comparison",
+      "settings": {
+        "epochs": 10,
+        "constant_lr": 0.003,
+        "conditioning": "time_and_class"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_nosched_comparison_backup.zip",
+            "member": "class_nosched_loss_comparison.png",
+            "image_sha256": "fdde94f73fcb7afcbff9b1172a6c0b297770e65cb3a75730315e13ab360983a7",
+            "dimensions": [
+              1350,
+              450
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b3-loss",
+      "assignment_section": "B3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 71,
+      "original_output": 2,
+      "submission_cell": 57,
+      "submission_output": 2,
+      "submission_cell_id": "submission-source-70",
+      "source_image_sha256": "616826545a1db0ae1d91429ad3d1190d4b3565bab6448e35e8bdc9ee10c779f0",
+      "image_path": "images/b3-loss.png",
+      "web_image_sha256": "616826545a1db0ae1d91429ad3d1190d4b3565bab6448e35e8bdc9ee10c779f0",
+      "dimensions": [
+        790,
+        290
+      ],
+      "rgba_sha256": "bd08b10ada6046bb5790d712cef829e395ec2ade890f12565676c2b34b00283b",
+      "experiment_type": "continued_training_loss",
+      "settings": {
+        "epochs": 30,
+        "source_epoch": 10,
+        "extra_epochs": 20,
+        "hidden_dim": 64,
+        "continuation_lr": 0.001,
+        "scheduler_gamma": 0.8912509381337456,
+        "conditioning": "time_only"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_time_bw_training_backup.zip",
+            "member": "time_bw_loss.png",
+            "image_sha256": "ec9a75fb45c33ae71ae8b071ef7904d5abd60b55766ec2a1ba9dd8e698606f60",
+            "dimensions": [
+              960,
+              360
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b3-epoch-10",
+      "assignment_section": "B3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 73,
+      "original_output": 1,
+      "submission_cell": 58,
+      "submission_output": 1,
+      "submission_cell_id": "submission-source-72",
+      "source_image_sha256": "63bcbad2cd4c44de7acaacdcd62f1d7a4090d1f079275c3486dade32bbf8fa36",
+      "image_path": "images/b3-epoch-10.png",
+      "web_image_sha256": "63bcbad2cd4c44de7acaacdcd62f1d7a4090d1f079275c3486dade32bbf8fa36",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "7e83eac3fdd61de8d69f228ef2c3fc9ce2ea01ea7863e11b3851ff46a016d433",
+      "experiment_type": "time_sampling",
+      "settings": {
+        "epoch": 10,
+        "conditioning": "time_only",
+        "euler_steps": 50,
+        "initial_noise_seed": 184
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_time_bw_results_backup.zip",
+            "member": "time_bw_samples_epoch_10.png",
+            "image_sha256": "916990a2ce6f3c570851dbe797a22488bbfd32700ef9f957c84301aeb263ecca",
+            "dimensions": [
+              1440,
+              552
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b3-epoch-20",
+      "assignment_section": "B3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 73,
+      "original_output": 2,
+      "submission_cell": 58,
+      "submission_output": 2,
+      "submission_cell_id": "submission-source-72",
+      "source_image_sha256": "42916e00942e0ddf9b7481ea5db90c0136f25b0c1b75a6671205414af4d5c099",
+      "image_path": "images/b3-epoch-20.png",
+      "web_image_sha256": "42916e00942e0ddf9b7481ea5db90c0136f25b0c1b75a6671205414af4d5c099",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "e841d7978e7a29b1e7ce1357c3e0566bef1dfc1fd09a6f4804f9c2ff3022dd90",
+      "experiment_type": "time_sampling",
+      "settings": {
+        "epoch": 20,
+        "conditioning": "time_only",
+        "euler_steps": 50,
+        "initial_noise_seed": 184
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_time_bw_results_backup.zip",
+            "member": "time_bw_samples_epoch_20.png",
+            "image_sha256": "8f7a13b1ca92fc9801764ef9b9ca1acdc2f080dc5558694fc22d5d8a4cf3760d",
+            "dimensions": [
+              1440,
+              552
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b3-epoch-30",
+      "assignment_section": "B3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 73,
+      "original_output": 3,
+      "submission_cell": 58,
+      "submission_output": 3,
+      "submission_cell_id": "submission-source-72",
+      "source_image_sha256": "9689c2adf252c9d190fabf50651970a26914e3a44cf2b52e6b6a733610548031",
+      "image_path": "images/b3-epoch-30.png",
+      "web_image_sha256": "9689c2adf252c9d190fabf50651970a26914e3a44cf2b52e6b6a733610548031",
+      "dimensions": [
+        1029,
+        449
+      ],
+      "rgba_sha256": "b09d7bc87a5efdb167f163b91ca3560dbb681dd059a38bf7b18ea0cee29474c4",
+      "experiment_type": "time_sampling",
+      "settings": {
+        "epoch": 30,
+        "conditioning": "time_only",
+        "euler_steps": 50,
+        "initial_noise_seed": 184
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_time_bw_results_backup.zip",
+            "member": "time_bw_samples_epoch_30.png",
+            "image_sha256": "697043c45dd18cb4fe2d9da4995cd2b22c82fca132f2eb3c310779a82fd3b681",
+            "dimensions": [
+              1440,
+              552
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    },
+    {
+      "id": "b3-comparison",
+      "assignment_section": "B3",
+      "original_source_id": "executed-notebook",
+      "source_type": "notebook_png_output",
+      "original_cell": 74,
+      "original_output": 1,
+      "submission_cell": 60,
+      "submission_output": 1,
+      "submission_cell_id": "submission-source-73",
+      "source_image_sha256": "084ad48428fc3b457e8849d4c2968daf7056fac42b16976dde9bd633800316e0",
+      "image_path": "images/b3-comparison.png",
+      "web_image_sha256": "084ad48428fc3b457e8849d4c2968daf7056fac42b16976dde9bd633800316e0",
+      "dimensions": [
+        1102,
+        909
+      ],
+      "rgba_sha256": "2b0a31cee4b09e56374e0f86ebd81f947365c61af99641479d82cbfff47c195b",
+      "experiment_type": "matched_time_comparison",
+      "settings": {
+        "epochs": [
+          10,
+          30
+        ],
+        "conditioning": "time_only",
+        "euler_steps": 50,
+        "initial_noise_seed": 184,
+        "top": "epoch_10",
+        "bottom": "epoch_30"
+      },
+      "settings_evidence": "Recorded notebook source for this experiment and saved comparison summaries; no checkpoint loading.",
+      "verification": {
+        "status": "byte-identical",
+        "method": "Decoded base64 PNG bytes match submission, original executed notebook and executed backup.",
+        "cross_checked_sources": [
+          "submission-notebook",
+          "executed-notebook",
+          "executed-backup"
+        ],
+        "archive_checks": [
+          {
+            "source_id": "partb_time_bw_results_backup.zip",
+            "member": "time_bw_comparison.png",
+            "image_sha256": "289bc66245358d550ca91cbc8a5b779d1fdaace01caa94fdacbd720b6e0d64ab",
+            "dimensions": [
+              1440,
+              1104
+            ],
+            "status": "different-render-representation",
+            "comparison": "Exact bytes and decoded RGBA dimensions/pixels; no resampling."
+          }
+        ],
+        "archive_status": "different-render-representation"
+      },
+      "intentional_reuse": false
+    }
+  ],
+  "scientific_results": {
+    "class_fm_history.json": {
+      "optimizer_steps": 9380,
+      "steps_per_epoch": 938,
+      "epochs": 10,
+      "final_epoch_mean_mse": 0.08430355769008208
+    },
+    "class_nosched_history.json": {
+      "optimizer_steps": 9380,
+      "steps_per_epoch": 938,
+      "epochs": 10,
+      "final_epoch_mean_mse": 0.08607087446364767
+    },
+    "time_fm_history.json": {
+      "optimizer_steps": 9380,
+      "steps_per_epoch": 938,
+      "epochs": 10,
+      "final_epoch_mean_mse": 0.09349463440811456
+    },
+    "time_bw_history.json": {
+      "optimizer_steps": 28140,
+      "steps_per_epoch": 938,
+      "epochs": 30,
+      "final_epoch_mean_mse": 0.08819641515231336
+    },
+    "nosched_percent_increase": 2.0963727059569948,
+    "bw_percent_reduction": 5.66686985765823
+  },
+  "requirements_basis": "Fall 2026 Part B and submission instructions verified in earlier audits; no network refresh in this milestone.",
+  "limitations": [
+    "No separate class-sampling ZIP found under the supplied backup root.",
+    "Notebook output PNGs may differ in render resolution from saved PNGs; no resampling is used to manufacture a match.",
+    "Official instructions use previously verified Fall 2026 audit findings; not fetched during this offline milestone.",
+    "Matching notebook copies verify preservation, not an independent experimental replication.",
+    "Model checkpoints were not loaded; settings are checked against recorded notebook source and saved summaries."
+  ]
+}

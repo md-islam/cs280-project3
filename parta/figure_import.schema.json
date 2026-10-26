@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Approved Part A PNG handoff, version 2",
+  "description": "Schema only, not experimental evidence. Offline validation; no real Part A import is authorized in Integration Milestone 2. A future importer must verify explicit owner approval and source provenance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "figures"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "figures": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "section_id",
+          "figure_id",
+          "experiment_id",
+          "experiment_type",
+          "source_filename",
+          "sha256",
+          "width",
+          "height",
+          "settings",
+          "settings_status",
+          "completion_status",
+          "approved_for_report",
+          "caption",
+          "caption_status",
+          "alt_text",
+          "observation_status",
+          "destination"
+        ],
+        "properties": {
+          "section_id": {
+            "enum": [
+              "a11",
+              "a12",
+              "a13",
+              "a14",
+              "a15",
+              "a16",
+              "a21",
+              "a31",
+              "a32",
+              "a33",
+              "a34",
+              "a-graduate"
+            ]
+          },
+          "figure_id": {
+            "type": "string",
+            "pattern": "^parta-[a-z0-9][a-z0-9_-]*$"
+          },
+          "experiment_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+          },
+          "experiment_type": {
+            "enum": [
+              "noising",
+              "gaussian_baseline",
+              "one_step",
+              "velocity_diagnostics",
+              "euler_trajectory",
+              "generation",
+              "cfg_comparison",
+              "editing_sweep",
+              "anagram",
+              "hybrid",
+              "graduate_transformation",
+              "course_logo"
+            ]
+          },
+          "source_filename": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*\\.png$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20000
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20000
+          },
+          "settings": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "Exact recorded metadata only. Optional absent values remain unknown. Editing sweeps require all seven starting times.",
+            "properties": {
+              "seed": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "time_values": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "uniqueItems": true,
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              },
+              "starting_times": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "uniqueItems": true,
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              },
+              "prompt": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "prompt_pair": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "minItems": 2,
+                "maxItems": 2,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "initial_noise_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "initial_noise_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "guidance": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "required": [
+                  "formula",
+                  "coefficient"
+                ],
+                "properties": {
+                  "formula": {
+                    "const": "v_cond + w * (v_cond - v_uncond)"
+                  },
+                  "coefficient": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                }
+              },
+              "euler_step_size": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "exclusiveMinimum": 0
+              },
+              "sampling_steps": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 1
+              },
+              "transformation": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "definition"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "definition": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "model_revision": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "settings_status": {
+            "enum": [
+              "verified_recorded",
+              "not_recorded"
+            ]
+          },
+          "completion_status": {
+            "const": "complete"
+          },
+          "approved_for_report": {
+            "const": true
+          },
+          "caption": {
+            "type": "string",
+            "minLength": 1
+          },
+          "caption_status": {
+            "const": "reviewed"
+          },
+          "alt_text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "observation_status": {
+            "enum": [
+              "reviewed",
+              "not_required"
+            ]
+          },
+          "destination": {
+            "type": "string",
+            "pattern": "^parta/images/[a-z0-9][a-z0-9_-]*\\.png$"
+          }
+        }
+      }
+    }
+  }
+}

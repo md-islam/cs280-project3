@@ -247,16 +247,16 @@
       "bytes": 17356
     },
     "partb/index.html": {
-      "sha256": "2b506e0a717970953ddd150a2c14602063e305580d5bba45d327e028cad97995",
-      "bytes": 29943
+      "sha256": "fa240c2f2f177e35a728e5f81f1a541a53e76b3ddfd0093e4d5819e336af1e60",
+      "bytes": 29971
     },
     "partb/styles.css": {
       "sha256": "9310bcbc1b51a0d3f8e7316ae556afe0c30b1c44a928d611ed4d900a92d4f08e",
       "bytes": 6573
     },
     "report.html": {
-      "sha256": "4e809b60d658eb850de9977b0b497ca16cb07f015435e6ebd015112019085ed4",
-      "bytes": 70395
+      "sha256": "bb61a332b4171f7a3ac2a396d9963065763ebba20117144933c3eeaae0b4d929",
+      "bytes": 70423
     }
   }
 }
